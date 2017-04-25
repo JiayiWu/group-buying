@@ -1,0 +1,21 @@
+# Java #
+*.class
+*.jar
+*.war
+
+# Idea #
+.idea/
+*.iml
+target/
+out/
+
+# eclipse #
+.project
+.settings
+
+# MAC #
+.DB_Store
+
+#Database
+db.properties
+

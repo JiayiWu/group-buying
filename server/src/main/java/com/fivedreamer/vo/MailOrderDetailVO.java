@@ -1,33 +1,33 @@
 package com.fivedreamer.vo;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Jiayiwu on 17/4/26.
  * Mail:wujiayi@lgdreamer.com
  * Change everywhere
  */
-public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRecommendListVO>{
+public class MailOrderDetailVO {
     //订单号
-    protected int id;
-    //订单类型 如拼车 拼团等 type 0为拼车 1为拼课 2为拼邮 3拼团
-    protected int ordertype;
+    private int id;
     //订单发起人昵称
-    protected String username;
+    private String username;
     //订单发起人头像
-    protected String usericonurl;
+    private String usericonurl;
     //订单主题
-    protected String title;
+    private String title;
     //订单内容
-    protected String content;
+    private String content;
     //订单发布者位置
-    protected String location;
+    private String location;
     //订单本地时间表述 如2017-04-26 13:26:16
-    protected String timeformate;
-    //订单发布时间long类型
-    protected long time;
-    //订单内容 0则为拼车方向 1为拼课分类 同理 2 3
-    protected String type;
-    //留言数量
-    protected int leaveMessageCount;
+    private String timeformate;
+
+    //拼邮类型
+    private String type;
+    //留言
+    private List<CommentVO> comments = new LinkedList<CommentVO>();
 
     public int getId() {
         return id;
@@ -35,14 +35,6 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getOrdertype() {
-        return ordertype;
-    }
-
-    public void setOrdertype(int ordertype) {
-        this.ordertype = ordertype;
     }
 
     public String getUsername() {
@@ -85,14 +77,6 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
         this.location = location;
     }
 
-    public long getTime() {
-        return time;
-    }
-
-    public void setTime(long time) {
-        this.time = time;
-    }
-
     public String getTimeformate() {
         return timeformate;
     }
@@ -109,19 +93,11 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
         this.type = type;
     }
 
-    public int getLeaveMessageCount() {
-        return leaveMessageCount;
+    public List<CommentVO> getComments() {
+        return comments;
     }
 
-    public void setLeaveMessageCount(int leaveMessageCount) {
-        this.leaveMessageCount = leaveMessageCount;
-    }
-
-    public int compareTo(GroupBuyOrderRecommendListVO o) {
-        if (this.time > o.getTime())
-            return -1;
-        else if(this.time < o.getTime())
-            return 1;
-        return 0;
+    public void setComments(List<CommentVO> comments) {
+        this.comments = comments;
     }
 }

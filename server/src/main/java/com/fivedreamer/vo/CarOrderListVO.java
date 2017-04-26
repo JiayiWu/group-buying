@@ -5,10 +5,10 @@ package com.fivedreamer.vo;
  * Mail:wujiayi@lgdreamer.com
  * Change everywhere
  */
-public class RecommendCarVO extends GroupBuyOrderRecommendListVO {
+public class CarOrderListVO extends GroupBuyOrderRecommendListVO {
 
 
-    public RecommendCarVO() {
+    public CarOrderListVO() {
 
     }
 }

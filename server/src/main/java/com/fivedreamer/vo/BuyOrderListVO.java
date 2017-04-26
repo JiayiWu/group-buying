@@ -5,5 +5,5 @@ package com.fivedreamer.vo;
  * Mail:wujiayi@lgdreamer.com
  * Change everywhere
  */
-public class RecommendClassVO extends GroupBuyOrderRecommendListVO {
+public class BuyOrderListVO extends GroupBuyOrderRecommendListVO {
 }

@@ -14,7 +14,7 @@
 
 
     <typeAliases>
-        <package name="com.vid.model"/>
+        <package name="com.fivedreamer.model"/>
     </typeAliases>
 
 

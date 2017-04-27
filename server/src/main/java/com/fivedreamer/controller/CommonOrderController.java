@@ -18,6 +18,15 @@ public class CommonOrderController {
 
 
     /**
+     * @return MessageInfo (true 表示推荐成功,把MainSearchVO存储在Object中返回. False表示推荐失败,失败原因存储在Reason中)
+     */
+    @RequestMapping("/index/sort/recommend")
+    @ResponseBody
+    public MessageInfo getSortRecommend(){
+        return null;
+    }
+
+    /**
      * @param search 需要检索的信息
      * @return MessageInfo (true 表示检索成功,把MainSearchVO存储在Object中返回. False表示检索失败,失败原因存储在Reason中)
      */

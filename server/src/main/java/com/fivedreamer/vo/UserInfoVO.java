@@ -1,5 +1,8 @@
 package com.fivedreamer.vo;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * Created by Jiayiwu on 17/4/26.
  * Mail:wujiayi@lgdreamer.com
@@ -22,11 +25,23 @@ public class UserInfoVO {
     private String iconurl;
     //用户背景图片URL
     private String backgroundurl;
+    //用于存储用户发布过的订单
+    private List<GroupBuyOrderRecommendListVO> list = new LinkedList<GroupBuyOrderRecommendListVO>();
+    //粉丝数量
+    private int fansCount;
+    //关注人数数量
+    private int focusCount;
+    //我发布的数量
+    private int postCount;
+    //我拼到的数量
+    private int attendCount;
+    //我评价的数量
+    private int commentCount;
 
     public UserInfoVO() {
     }
 
-    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl) {
+    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl, int fansCount, int focusCount, int postCount, int attendCount, int commentCount, List<GroupBuyOrderRecommendListVO> list) {
         this.id = id;
         this.telephone = telephone;
         this.nickname = nickname;
@@ -35,6 +50,12 @@ public class UserInfoVO {
         this.successCount = successCount;
         this.iconurl = iconurl;
         this.backgroundurl = backgroundurl;
+        this.fansCount = fansCount;
+        this.focusCount = focusCount;
+        this.postCount = postCount;
+        this.attendCount = attendCount;
+        this.commentCount = commentCount;
+        this.list = list;
     }
 
     public String getId() {
@@ -99,5 +120,53 @@ public class UserInfoVO {
 
     public void setBackgroundurl(String backgroundurl) {
         this.backgroundurl = backgroundurl;
+    }
+
+    public List<GroupBuyOrderRecommendListVO> getList() {
+        return list;
+    }
+
+    public void setList(List<GroupBuyOrderRecommendListVO> list) {
+        this.list = list;
+    }
+
+    public int getFansCount() {
+        return fansCount;
+    }
+
+    public void setFansCount(int fansCount) {
+        this.fansCount = fansCount;
+    }
+
+    public int getFocusCount() {
+        return focusCount;
+    }
+
+    public void setFocusCount(int focusCount) {
+        this.focusCount = focusCount;
+    }
+
+    public int getPostCount() {
+        return postCount;
+    }
+
+    public void setPostCount(int postCount) {
+        this.postCount = postCount;
+    }
+
+    public int getAttendCount() {
+        return attendCount;
+    }
+
+    public void setAttendCount(int attendCount) {
+        this.attendCount = attendCount;
+    }
+
+    public int getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(int commentCount) {
+        this.commentCount = commentCount;
     }
 }

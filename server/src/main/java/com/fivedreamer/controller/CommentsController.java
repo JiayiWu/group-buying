@@ -21,7 +21,7 @@ public class CommentsController {
      * @param orderid 被评论订单ID
      * @param orderType 被评论订单类型 0 拼车 1是拼课 2是拼邮 3是拼团
      * @param content 评论内容
-     * @return MessageInfo(True表示回复成功. False表示回复失败,失败原因存储在Reason中)
+     * @return MessageInfo(True表示回复成功.Object为该评论存储成功后的ID False表示回复失败,失败原因存储在Reason中 )
      */
     @RequestMapping("/message/leave")
     @ResponseBody
@@ -35,7 +35,7 @@ public class CommentsController {
      * @param orderType 被评论订单类型 0 拼车 1是拼课 2是拼邮 3是拼团
      * @param content 回复内容
      * @param replyid 被回复人的ID
-     * @return MessageInfo(True表示回复成功. False表示回复失败,失败原因存储在Reason中)
+     * @return MessageInfo(True表示回复成功. Object为该回复存储成功后的ID.False表示回复失败,失败原因存储在Reason中 要评论的ID)
      */
     @RequestMapping("/message/reply")
     @ResponseBody

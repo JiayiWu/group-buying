@@ -26,6 +26,63 @@ public class UserController {
         return null;
     }
 
+
+    /**
+     * @param id 用于查找指定用户的ID
+     * @return MessageInfo(True 则为获取指定用户信息成功,用户信息存储在object中,返回UserInfoVO.False 则为修改失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/index/info")
+    @ResponseBody
+    public MessageInfo getDetailUserInfo(int id){
+        return null;
+    }
+
+    /**
+     * @return MessageInfo(True 则返回粉丝列表,用户信息存储在object中,返回List<UserListVO>.False 则为查找失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/fans/list")
+    @ResponseBody
+    public MessageInfo getFansList(){
+        return null;
+    }
+    /**
+     * @return MessageInfo(True 则返回关注人列表,用户信息存储在object中,返回List<UserListVO>.False 则为查找失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/focus/list")
+    @ResponseBody
+    public MessageInfo getFocusList(){
+        return null;
+    }
+
+    /**
+     * 用于获取自己已经发布的订单消息
+     * @return MessageInfo(True 则返回我发布的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/post/list")
+    @ResponseBody
+    public MessageInfo getSelfPostOrder(){
+        return null;
+    }
+
+    /**
+     * 用于获取自己已经拼到的订单消息
+     * @return MessageInfo(True 则返回我拼到的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/group/list")
+    @ResponseBody
+    public MessageInfo getSelfGroupOrder(){
+        return null;
+    }
+    /**
+     * 用于获取自己评价过的订单消息
+     * @return MessageInfo(True 则返回我评价过的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
+     */
+    @RequestMapping("/user/comments/list")
+    @ResponseBody
+    public MessageInfo getSelfCommentsOrder(){
+        return null;
+    }
+
     /**
      * @param session
      * @param nickName 昵称
@@ -52,6 +109,8 @@ public class UserController {
     public MessageInfo updateUserPassword(HttpSession session,String oldPassword,String newPassword){
         return null;
     }
+
+
 
 
 }

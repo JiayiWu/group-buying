@@ -37,11 +37,13 @@ public class UserInfoVO {
     private int attendCount;
     //我评价的数量
     private int commentCount;
+    //用户相关的标签
+    private String[] tags;
 
     public UserInfoVO() {
     }
 
-    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl, int fansCount, int focusCount, int postCount, int attendCount, int commentCount, List<GroupBuyOrderRecommendListVO> list) {
+    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl, int fansCount, int focusCount, int postCount, int attendCount, int commentCount, List<GroupBuyOrderRecommendListVO> list,String[] tags) {
         this.id = id;
         this.telephone = telephone;
         this.nickname = nickname;
@@ -56,6 +58,7 @@ public class UserInfoVO {
         this.attendCount = attendCount;
         this.commentCount = commentCount;
         this.list = list;
+        this.tags = tags;
     }
 
     public String getId() {
@@ -168,5 +171,13 @@ public class UserInfoVO {
 
     public void setCommentCount(int commentCount) {
         this.commentCount = commentCount;
+    }
+
+    public String[] getTags() {
+        return tags;
+    }
+
+    public void setTags(String[] tags) {
+        this.tags = tags;
     }
 }

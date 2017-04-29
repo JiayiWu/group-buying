@@ -90,11 +90,12 @@ public class UserController {
      * @param sex  性别
      * @param iconUrl 图像URL
      * @param backgroundUrl 背景图片URL
+     * @param tag 标签
      * @return MessageInfo(True 则为修改成功,成功更新后的对象存储在object中,返回UserInfoVO. False 则为修改失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("user/update/info")
     @ResponseBody
-    public MessageInfo updateUserInfo(HttpSession session,String nickName,String school,String sex,String iconUrl,String backgroundUrl){
+    public MessageInfo updateUserInfo(HttpSession session,String nickName,String school,String sex,String iconUrl,String backgroundUrl,String[] tag){
         return null;
     }
 

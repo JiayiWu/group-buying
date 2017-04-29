@@ -21,14 +21,16 @@ public class BuyOrderController {
      * @param type 0吃喝 1玩乐 2服饰 3其他
      * @return MessageInfo (true 表示返回该方向的订单成功,Object为List<BuyOrderListVO>类型,存储的在该类型上的订单. False表示返回失败,失败原因存储在Reason中)
      */
-    @RequestMapping("/mail/type/index")
+    @RequestMapping("/buy/type/index")
     @ResponseBody
     public MessageInfo getTypeList(int type){
         return null;
     }
 
 
-    @RequestMapping("/mail/order/index")
+
+
+    @RequestMapping("/buy/order/index")
     @ResponseBody
     /**
      * @param id 订单编号
@@ -38,7 +40,7 @@ public class BuyOrderController {
         return null;
     }
 
-    @RequestMapping("/mail/order/add")
+    @RequestMapping("/buy/order/add")
     @ResponseBody
     /**
      * @param session
@@ -53,7 +55,7 @@ public class BuyOrderController {
         return null;
     }
 
-    @RequestMapping("/mail/order/list")
+    @RequestMapping("/buy/order/list")
     @ResponseBody
     /**
      * @return MessageInfo (true 表示返回成功.返回的Object对象为List<BuyOrderListVO>,根据发布时间排序后返回该对象. False表示返回失败,失败原因存储在Reason中)
@@ -63,7 +65,7 @@ public class BuyOrderController {
     }
 
 
-    @RequestMapping("/mail/order/success")
+    @RequestMapping("/buy/order/success")
     @ResponseBody
     /**
      * @param id 订单编号
@@ -73,7 +75,7 @@ public class BuyOrderController {
         return null;
     }
 
-    @RequestMapping("/mail/order/delete")
+    @RequestMapping("/buy/order/delete")
     @ResponseBody
     /**
      * @param id 订单编号

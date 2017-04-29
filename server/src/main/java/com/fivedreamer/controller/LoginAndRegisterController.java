@@ -16,27 +16,17 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LoginAndRegisterController {
 
-    /**
-     * @param session
-     * @param phoneNumber
-     * @return MessageInfo (true表示短信发送成功,false表示短信发送失败或电话无效)
-     */
-    @RequestMapping("/register/message")
-    @ResponseBody
-    public MessageInfo sendMessage(HttpSession session,String phoneNumber){
-        return null;
-    }
+
 
     /**
      * @param session
      * @param phoneNumber
      * @param password 用户设定的密码
-     * @param verificationCode 发送短信时接收的验证码
      * @return MessageInfo (true表示注册成功,false表示验证码错误)
      */
     @RequestMapping("/register")
     @ResponseBody
-    public MessageInfo register(HttpSession session,String phoneNumber,String password,String verificationCode ){
+    public MessageInfo register(HttpSession session,String phoneNumber,String password ){
         return null;
     }
 

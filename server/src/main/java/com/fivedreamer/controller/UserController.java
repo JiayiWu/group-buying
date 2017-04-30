@@ -1,11 +1,18 @@
 package com.fivedreamer.controller;
 
+import com.fivedreamer.config.MessageInfo;
+import com.fivedreamer.model.Tag;
+import com.fivedreamer.model.User;
+import com.fivedreamer.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.security.auth.message.MessageInfo;
+
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Jiayiwu on 17/4/25.
@@ -15,6 +22,8 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class UserController {
 
+    @Resource
+    UserService userService;
 
     /**
      * @param session
@@ -23,7 +32,7 @@ public class UserController {
     @RequestMapping("/user/info")
     @ResponseBody
     public MessageInfo getUserInfo(HttpSession session){
-        return null;
+        return userService.getUserInfo(((User)session.getAttribute("user")).getId());
     }
 
 
@@ -34,53 +43,62 @@ public class UserController {
     @RequestMapping("/user/index/info")
     @ResponseBody
     public MessageInfo getDetailUserInfo(int id){
-        return null;
+
+        return userService.getUserInfo(id);
     }
 
     /**
+     * @param session
      * @return MessageInfo(True 则返回粉丝列表,用户信息存储在object中,返回List<UserListVO>.False 则为查找失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("/user/fans/list")
     @ResponseBody
-    public MessageInfo getFansList(){
-        return null;
+    public MessageInfo getFansList(HttpSession session){
+
+        return userService.getFansList(((User)session.getAttribute("user")).getId());
     }
     /**
+     * @param session
      * @return MessageInfo(True 则返回关注人列表,用户信息存储在object中,返回List<UserListVO>.False 则为查找失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("/user/focus/list")
     @ResponseBody
-    public MessageInfo getFocusList(){
-        return null;
+    public MessageInfo getFocusList(HttpSession session){
+        return userService.getFocusList(((User)session.getAttribute("user")).getId());
     }
 
     /**
      * 用于获取自己已经发布的订单消息
+     * @param session
      * @return MessageInfo(True 则返回我发布的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("/user/post/list")
     @ResponseBody
-    public MessageInfo getSelfPostOrder(){
-        return null;
+    public MessageInfo getSelfPostOrder(HttpSession session){
+
+        return userService.getSelfPostOrder(((User)session.getAttribute("user")).getId());
     }
 
     /**
      * 用于获取自己已经拼到的订单消息
+     * @param session
      * @return MessageInfo(True 则返回我拼到的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("/user/group/list")
     @ResponseBody
-    public MessageInfo getSelfGroupOrder(){
-        return null;
+    public MessageInfo getSelfGroupOrder(HttpSession session){
+        return userService.getSelfGroupOrder(((User)session.getAttribute("user")).getId());
     }
     /**
      * 用于获取自己评价过的订单消息
+     * @param session
      * @return MessageInfo(True 则返回我评价过的订单列表,用户信息存储在object中,返回List<GroupBuyOrderRecommendListVO>.False 则为查找失败,具体失败原因存储在Reason中)
      */
     @RequestMapping("/user/comments/list")
     @ResponseBody
-    public MessageInfo getSelfCommentsOrder(){
-        return null;
+    public MessageInfo getSelfCommentsOrder(HttpSession session){
+
+        return userService.getSelfCommentsOrder(((User)session.getAttribute("user")).getId());
     }
 
     /**
@@ -96,7 +114,10 @@ public class UserController {
     @RequestMapping("user/update/info")
     @ResponseBody
     public MessageInfo updateUserInfo(HttpSession session,String nickName,String school,String sex,String iconUrl,String backgroundUrl,String[] tag){
-        return null;
+
+       int id = ((User)session.getAttribute("user")).getId();
+      return userService.updateUserInfo(id,nickName,school,sex,iconUrl,backgroundUrl,tag);
+
     }
 
     /**
@@ -108,7 +129,8 @@ public class UserController {
     @RequestMapping("user/update/password")
     @ResponseBody
     public MessageInfo updateUserPassword(HttpSession session,String oldPassword,String newPassword){
-        return null;
+        int id = ((User)session.getAttribute("user")).getId();
+        return userService.updateUserPassword(id,oldPassword,newPassword);
     }
 
 

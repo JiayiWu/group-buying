@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivedreamer.mapper.UserMapper">
+
+    <select id="getUserInfo"  resultType="UserInfoVO">
+        SELECT u.id as id,u.telephone as telephone ,u.nickname as nickname,u.school as school,u.sex as sex,
+        u.successCount as successCount, u.iconUrl as iconUrl ,u.backgroundUrl as backgroundUrl ,fans.count as fansCount,
+        focus.count as focusCount
+        FROM user u,(select COUNT(*) as count FROM relationship WHERE ownerid = #{0}) fans,
+        (select COUNT(*)  as count FROM relationship WHERE fansid = #{0}) focus WHERE u.id = #{0}
+    </select>
+
+    <select id="getUser"  resultType="User">
+        SELECT * FROM user WHERE id = #{0}
+    </select>
+
+    <select id="getFansList"  resultType="UserListVO">
+        SELECT id ,nickname as userName, iconUrl FROM user WHERE id IN (SELECT fansid FROM relationship WHERE ownerid = #{0})
+    </select>
+
+    <select id="getFocusList"  resultType="UserListVO">
+        SELECT id ,nickname as userName, iconUrl FROM user WHERE id IN (SELECT ownerid FROM relationship WHERE fansid = #{0})
+    </select>
+
+    <update id="updateUserInfo">
+        UPDATE user SET nickName = #{1,jdbcType=VARCHAR},school = #{2,jdbcType=VARCHAR},sex = #{3,jdbcType=VARCHAR},iconUrl = #{4,jdbcType=VARCHAR},backgroundUrl = #{5,jdbcType=VARCHAR} WHERE id = #{0}
+    </update>
+
+    <update id="updatePassword">
+        UPDATE user SET password = #{1,jdbcType=VARCHAR}
+    </update>
+</mapper>

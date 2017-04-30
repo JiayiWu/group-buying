@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivedreamer.mapper.CarOrderMapper">
+
+    <select id="getCarOrderNowByUserID"  resultType="CarOrder">
+      SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+      o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+      u.nickname as username
+        FROM (SELECT * FROM group_car WHERE userid = #{0} AND state = 0 ) o ,user u WHERE o.userid = u.id
+    </select>
+
+    <select id="getCarOrderSuccessByUserID"  resultType="CarOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_car WHERE userid = #{0} AND state = 1 ) o ,user u WHERE o.userid = u.id
+    </select>
+
+    <select id="getCarOrderByComments"  resultType="CarOrder">
+      SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_car WHERE userid = #{0} AND (state = 1 OR state = 0) AND id IN (SELECT  orderid FROM comments
+        WHERE formid = #{0} AND TYPE = 0)) o  ,user u WHERE o.userid = u.id
+    </select>
+
+</mapper>

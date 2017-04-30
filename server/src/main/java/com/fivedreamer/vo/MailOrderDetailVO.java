@@ -24,6 +24,9 @@ public class MailOrderDetailVO {
     //订单本地时间表述 如2017-04-26 13:26:16
     private String timeformate;
 
+    //订单详细图片信息
+    private String[] imgPath;
+
     //拼邮类型
     private String type;
     //留言

@@ -15,6 +15,7 @@
 
     <typeAliases>
         <package name="com.fivedreamer.model"/>
+        <package name="com.fivedreamer.vo"/>
     </typeAliases>
 
 

@@ -1,5 +1,7 @@
 package com.fivedreamer.vo;
 
+import com.fivedreamer.model.Tag;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -38,12 +40,12 @@ public class UserInfoVO {
     //我评价的数量
     private int commentCount;
     //用户相关的标签
-    private String[] tags;
+    private List<Tag> tags;
 
     public UserInfoVO() {
     }
 
-    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl, int fansCount, int focusCount, int postCount, int attendCount, int commentCount, List<GroupBuyOrderRecommendListVO> list,String[] tags) {
+    public UserInfoVO(String id, String telephone, String nickname, String school, String sex, int successCount, String iconurl, String backgroundurl, int fansCount, int focusCount, int postCount, int attendCount, int commentCount, List<GroupBuyOrderRecommendListVO> list,List<Tag> tags) {
         this.id = id;
         this.telephone = telephone;
         this.nickname = nickname;
@@ -173,11 +175,11 @@ public class UserInfoVO {
         this.commentCount = commentCount;
     }
 
-    public String[] getTags() {
+    public List<Tag> getTags() {
         return tags;
     }
 
-    public void setTags(String[] tags) {
+    public void setTags(List<Tag> tags) {
         this.tags = tags;
     }
 }

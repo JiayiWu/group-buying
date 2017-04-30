@@ -18,6 +18,10 @@ public interface UserMapper {
 
     public User getUser(int id);
 
+    public User getUserByPhoneNumber(String PhoneNumber);
+
+    public int register(User user);
+
     public List<UserListVO> getFansList(int id);
 
     public List<UserListVO> getFocusList(int id);
@@ -25,6 +29,9 @@ public interface UserMapper {
     public int updateUserInfo(int id,String nickName,String school,String sex,String iconUrl,String backgroundUrl);
 
     public int updatePassword(int id,String password);
+
+
+
 
 
 }

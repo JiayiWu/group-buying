@@ -40,6 +40,15 @@ public class User {
         this.backgroundUrl = backgroundUrl;
     }
 
+    public User(String telephone, String nickname, String password, String school, String sex, String iconUrl, String backgroundUrl) {
+        this.telephone = telephone;
+        this.nickname = nickname;
+        this.password = password;
+        this.school = school;
+        this.sex = sex;
+        this.iconUrl = iconUrl;
+        this.backgroundUrl = backgroundUrl;
+    }
 
     public int getId() {
         return id;

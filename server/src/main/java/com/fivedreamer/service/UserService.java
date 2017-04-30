@@ -11,6 +11,7 @@ import com.fivedreamer.utils.SHA256Util;
 import com.fivedreamer.vo.*;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
@@ -25,6 +26,7 @@ import java.util.List;
  */
 @Service
 @EnableTransactionManagement
+@Transactional(rollbackFor = Exception.class)
 public class UserService {
 
 

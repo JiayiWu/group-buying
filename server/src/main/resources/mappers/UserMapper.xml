@@ -31,4 +31,15 @@
     <update id="updatePassword">
         UPDATE user SET password = #{1,jdbcType=VARCHAR}
     </update>
+
+
+    <select id="getUserByPhoneNumber"  resultType="User">
+        SELECT * FROM user WHERE telephone = #{0}
+    </select>
+
+    <insert id="register" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO user (telephone,nickname,password,school,sex,iconUrl,backgroundUrl) VALUE (#{telephone},#{nickname},#{password},#{school},#{sex},#{iconUrl},#{backgroundUrl})
+    </insert>
+
+
 </mapper>

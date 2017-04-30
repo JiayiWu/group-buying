@@ -1,10 +1,15 @@
 package com.fivedreamer.controller;
 
+import com.fivedreamer.config.MessageInfo;
+import com.fivedreamer.model.User;
+import com.fivedreamer.service.LoginAndRegisterService;
+import com.fivedreamer.utils.SHA256Util;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.security.auth.message.MessageInfo;
+import javax.annotation.Resource;
+
 import javax.servlet.http.HttpSession;
 
 /**
@@ -16,18 +21,24 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class LoginAndRegisterController {
 
-
+    @Resource
+    LoginAndRegisterService loginAndRegisterService;
 
     /**
      * @param session
      * @param phoneNumber
-     * @param password 用户设定的密码
+     * @param password    用户设定的密码
      * @return MessageInfo (true表示注册成功,false表示验证码错误)
      */
     @RequestMapping("/register")
     @ResponseBody
-    public MessageInfo register(HttpSession session,String phoneNumber,String password ){
-        return null;
+    public MessageInfo register(HttpSession session, String phoneNumber, String password) {
+        User tem = new User(phoneNumber,"用户"+phoneNumber, SHA256Util.Encrypt(password),"学校未选择","男","","");
+        MessageInfo messageInfo = loginAndRegisterService.register(tem);
+        if (messageInfo.isResult()){
+            session.setAttribute("user",messageInfo.getObject());
+        }
+        return messageInfo;
     }
 
     /**
@@ -38,7 +49,13 @@ public class LoginAndRegisterController {
      */
     @RequestMapping("/login")
     @ResponseBody
-    public MessageInfo login(HttpSession session,String phoneNumber,String password){
-        return null;
+    public MessageInfo login(HttpSession session, String phoneNumber, String password) {
+
+
+        MessageInfo messageInfo = loginAndRegisterService.login(phoneNumber,password);
+        if (messageInfo.isResult()){
+            session.setAttribute("user",messageInfo.getObject());
+        }
+        return messageInfo;
     }
 }

@@ -1,9 +1,12 @@
 package com.fivedreamer.controller;
 
 import com.fivedreamer.config.MessageInfo;
+import com.fivedreamer.service.AdvertisementService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
 
 /**
  * Created by Jiayiwu on 17/4/29.
@@ -12,6 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class AdvertisementController {
+
+
+    @Resource
+    AdvertisementService advertisementService;
 
     /**
      * @param imgURL  广告图片URL
@@ -22,7 +29,8 @@ public class AdvertisementController {
     @RequestMapping("/advertisement/add")
     @ResponseBody
     public MessageInfo addAdvertisement(String imgURL,String contents,String targetURL){
-        return null;
+
+        return advertisementService.addAdvertisement(imgURL,contents,targetURL);
     }
 
 
@@ -36,7 +44,7 @@ public class AdvertisementController {
     @RequestMapping("/advertisement/update")
     @ResponseBody
     public MessageInfo updateAdvertisement(int id,String imgURL,String contents,String targetURL){
-        return null;
+        return advertisementService.updateAdvertisement(id,imgURL,contents,targetURL);
     }
 
 
@@ -47,7 +55,7 @@ public class AdvertisementController {
     @RequestMapping("/advertisement/delete")
     @ResponseBody
     public MessageInfo deleteAdvertisement(int id){
-        return null;
+        return advertisementService.deleteAdvertisement(id);
     }
 
     /**
@@ -56,6 +64,6 @@ public class AdvertisementController {
     @RequestMapping("/advertisement/list")
     @ResponseBody
     public MessageInfo getAdvertisementList(){
-        return null;
+        return advertisementService.getAdvertisementList();
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivedreamer.mapper.AdvertisementMapper">
+
+    <select id="getAdvertisementList"  resultType="Advertisement">
+     SELECT * FROM advertisement
+    </select>
+
+    <update id="updateAdvertisement">
+        UPDATE advertisement SET imgUrl = #{1,jdbcType=VARCHAR},contents = #{2,jdbcType=VARCHAR},targetUrl = #{3,jdbcType=VARCHAR} WHERE id = #{0}
+    </update>
+
+    <insert id="addAdvertisement" parameterType="Advertisement" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO advertisement (imgUrl,contents,targetUrl) VALUE (#{imgURL},#{contents},#{targetURL})
+    </insert>
+
+    <delete id="deleteAdvertisement">
+        DELETE  FROM advertisement WHERE id = #{0}
+    </delete>
+
+</mapper>

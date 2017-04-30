@@ -29,7 +29,7 @@
     </update>
 
     <update id="updatePassword">
-        UPDATE user SET password = #{1,jdbcType=VARCHAR}
+        UPDATE user SET password = #{1,jdbcType=VARCHAR} WHERE id = #{0}
     </update>
 
 

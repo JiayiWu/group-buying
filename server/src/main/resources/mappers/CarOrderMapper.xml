@@ -71,11 +71,11 @@
     </update>
 
     <update id="descMessageCount">
-        UPDATE group_mail SET  messageCount = messageCount -1 WHERE id = #{0}
+        UPDATE group_car SET  messageCount = messageCount -1 WHERE id = #{0}
     </update>
 
     <update id="ascMessageCount">
-        UPDATE group_mail SET  messageCount = messageCount +1 WHERE id = #{0}
+        UPDATE group_car SET  messageCount = messageCount +1 WHERE id = #{0}
     </update>
 
 </mapper>

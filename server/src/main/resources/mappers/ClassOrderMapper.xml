@@ -26,8 +26,53 @@
         WHERE formid = #{0} AND TYPE = 1)) o  ,user u WHERE o.userid = u.id
     </select>
 
+
+
+
+    <select id="getClassOrderListByType"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_class WHERE type = #{0} AND state = 0 ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <select id="getClassOrderDetail"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_class WHERE id = #{0}  ) o ,user u WHERE o.userid = u.id
+    </select>
+
+    <insert id="addClassOrder" parameterType="CommonOrder" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO group_class (userid,title,content,location,time,type) VALUE (#{userid},#{title},#{content},#{location},#{time},#{type})
+    </insert>
+
+
+    <select id="getClassRecommendList"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_class WHERE state = 0  ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <update id="modifyClassOrder">
+        UPDATE group_class SET  title = #{1} ,content = #{2}, location = #{3} , type = #{4},time = #{5} WHERE id = #{0}
+    </update>
+
     <update id="successOrder">
-        UPDATE user SET password = #{1,jdbcType=VARCHAR} WHERE id = #{0}
+        UPDATE group_class SET  state = 1 WHERE id = #{0}
+    </update>
+
+    <update id="deleteOrder">
+        UPDATE group_class SET  state = 2 WHERE id = #{0}
+    </update>
+
+    <update id="descMessageCount">
+        UPDATE group_class SET  messageCount = messageCount -1 WHERE id = #{0}
+    </update>
+
+    <update id="ascMessageCount">
+        UPDATE group_class SET  messageCount = messageCount +1 WHERE id = #{0}
     </update>
 
 </mapper>

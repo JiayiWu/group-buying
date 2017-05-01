@@ -1,10 +1,14 @@
 package com.fivedreamer.controller;
 
 import com.fivedreamer.config.MessageInfo;
+import com.fivedreamer.mapper.ClassOrderMapper;
+import com.fivedreamer.model.User;
+import com.fivedreamer.service.ClassOrderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -16,6 +20,8 @@ import javax.servlet.http.HttpSession;
 public class ClassOrderController {
 
 
+    @Resource
+    ClassOrderService classOrderService;
 
 
 
@@ -26,7 +32,7 @@ public class ClassOrderController {
     @RequestMapping("/class/type/index")
     @ResponseBody
     public MessageInfo getTypeList(int type){
-        return null;
+        return classOrderService.getTypeList(type);
     }
 
 
@@ -37,7 +43,7 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示返回具体的订单成功,Object为ClassOrderDetailVO类型,存储的该订单的详细信息. False表示返回失败,失败原因存储在Reason中)
      */
     public MessageInfo getClassOrderDetail(int id){
-        return null;
+        return classOrderService.getClassOrderDetail(id);
     }
 
 
@@ -56,7 +62,7 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
     public MessageInfo addClassOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
-        return null;
+        return classOrderService.addClassOrder(((User)session.getAttribute("user")).getId(),title,content,location,type,imgUrl);
     }
 
     @RequestMapping("/class/order/modify")
@@ -71,7 +77,7 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
      */
     public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String[] imgUrl){
-        return null;
+        return classOrderService.modifyOrder(id,title,content,location,type,imgUrl);
     }
 
     @RequestMapping("/class/order/list")
@@ -80,7 +86,7 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示返回成功.返回的Object对象为List<ClassOrderListVO>,根据发布时间排序后返回该对象. False表示返回失败,失败原因存储在Reason中)
      */
     public MessageInfo getRecommendClassOrderList(){
-        return null;
+        return classOrderService.getRecommendClassOrderList();
     }
 
 
@@ -91,7 +97,7 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示更改订单状态成功,订单变为拼团成功. False表示状态改变失败,失败原因存储在Reason中)
      */
     public MessageInfo successOrder(int id){
-        return null;
+        return classOrderService.successOrder(id);
     }
 
     @RequestMapping("/class/order/delete")
@@ -101,6 +107,6 @@ public class ClassOrderController {
      * @return MessageInfo (true 表示更改订单状态成功,订单被删除. False表示状态改变失败,失败原因存储在Reason中)
      */
     public MessageInfo deleteOrder(int id){
-        return null;
+        return classOrderService.deleteOrder(id);
     }
 }

@@ -40,6 +40,10 @@ public class ClassOrderController {
         return null;
     }
 
+
+
+
+
     @RequestMapping("/class/order/add")
     @ResponseBody
     /**
@@ -51,7 +55,22 @@ public class ClassOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
-    public MessageInfo addCarOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
+    public MessageInfo addClassOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
+        return null;
+    }
+
+    @RequestMapping("/class/order/modify")
+    @ResponseBody
+    /**
+     * @param id 要修改帖子的ID
+     * @param title 标题
+     * @param content 拼单内容
+     * @param location 地址
+     * @param type 0雅思托福 1BEC托业 2考研 3考证 4小语种 5考驾照 6来健身 7其他
+     * @param imgUrl 发布图片的URL
+     * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
+     */
+    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String[] imgUrl){
         return null;
     }
 
@@ -60,7 +79,7 @@ public class ClassOrderController {
     /**
      * @return MessageInfo (true 表示返回成功.返回的Object对象为List<ClassOrderListVO>,根据发布时间排序后返回该对象. False表示返回失败,失败原因存储在Reason中)
      */
-    public MessageInfo getRecommendCarOrderList(){
+    public MessageInfo getRecommendClassOrderList(){
         return null;
     }
 

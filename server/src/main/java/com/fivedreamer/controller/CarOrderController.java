@@ -63,6 +63,22 @@ public class CarOrderController {
         return null;
     }
 
+
+    @RequestMapping("/car/order/modify")
+    @ResponseBody
+    /**
+     * @param id 要修改帖子的ID
+     * @param title 标题
+     * @param content 拼单内容
+     * @param location 地址
+     * @param direction 方向
+     * @param imgUrl 发布图片的URL
+     * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
+     */
+    public MessageInfo modifyOrder(int id,String title,String content,String location,String direction,String[] imgUrl){
+        return null;
+    }
+
     @RequestMapping("/car/order/list")
     @ResponseBody
     /**

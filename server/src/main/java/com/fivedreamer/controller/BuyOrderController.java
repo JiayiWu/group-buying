@@ -36,7 +36,7 @@ public class BuyOrderController {
      * @param id 订单编号
      * @return MessageInfo (true 表示返回具体的订单成功,Object为BuyOrderDetailVO类型,存储的该订单的详细信息. False表示返回失败,失败原因存储在Reason中)
      */
-    public MessageInfo getClassOrderDetail(int id){
+    public MessageInfo getBuyOrderDetail(int id){
         return null;
     }
 
@@ -51,7 +51,23 @@ public class BuyOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
-    public MessageInfo addCarOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
+    public MessageInfo addBuyOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
+        return null;
+    }
+
+
+    @RequestMapping("/buy/order/modify")
+    @ResponseBody
+    /**
+     * @param id 要修改帖子的ID
+     * @param title 标题
+     * @param content 拼单内容
+     * @param location 地址
+     * @param type 0吃喝 1玩乐 2服饰 3其他
+     * @param imgUrl 发布图片的URL
+     * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
+     */
+    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String[] imgUrl){
         return null;
     }
 
@@ -60,7 +76,7 @@ public class BuyOrderController {
     /**
      * @return MessageInfo (true 表示返回成功.返回的Object对象为List<BuyOrderListVO>,根据发布时间排序后返回该对象. False表示返回失败,失败原因存储在Reason中)
      */
-    public MessageInfo getRecommendCarOrderList(){
+    public MessageInfo getRecommendBuyOrderList(){
         return null;
     }
 

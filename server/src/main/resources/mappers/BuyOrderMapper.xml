@@ -26,4 +26,50 @@
         WHERE formid = #{0} AND TYPE = 3)) o  ,user u WHERE o.userid = u.id
     </select>
 
+
+    <select id="getBuyOrderListByType"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_buy WHERE type = #{0} AND state = 0 ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <select id="getBuyOrderDetail"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_buy WHERE id = #{0}  ) o ,user u WHERE o.userid = u.id
+    </select>
+
+    <insert id="addBuyOrder" parameterType="CommonOrder" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO group_buy (userid,title,content,location,time,type) VALUE (#{userid},#{title},#{content},#{location},#{time},#{type})
+    </insert>
+
+
+    <select id="getBuyRecommendList"  resultType="CommonOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.type as type,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_buy WHERE state = 0  ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <update id="modifyBuyOrder">
+        UPDATE group_buy SET  title = #{1} ,content = #{2}, location = #{3} , type = #{4},time = #{5} WHERE id = #{0}
+    </update>
+
+    <update id="successOrder">
+        UPDATE group_buy SET  state = 1 WHERE id = #{0}
+    </update>
+
+    <update id="deleteOrder">
+        UPDATE group_buy SET  state = 2 WHERE id = #{0}
+    </update>
+
+    <update id="descMessageCount">
+        UPDATE group_buy SET  messageCount = messageCount -1 WHERE id = #{0}
+    </update>
+
+    <update id="ascMessageCount">
+        UPDATE group_buy SET  messageCount = messageCount +1 WHERE id = #{0}
+    </update>
 </mapper>

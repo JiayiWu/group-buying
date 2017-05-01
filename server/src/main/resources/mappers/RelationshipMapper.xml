@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fivedreamer.mapper.RelationshipMapper">
+
+
+
+
+
+    <insert id="addRelationship"  >
+        INSERT INTO relationship (ownerid,fansid) VALUE (#{0},#{1})
+    </insert>
+
+   <select id="getRelationship" resultType="Relationship">
+       SELECT * FROM relationship WHERE ownerid = #{0} AND fansid = #{1}
+   </select>
+
+    <delete id="removeRelationship">
+        DELETE FROM relationship WHERE ownerid = #{0} AND fansid = #{1}
+    </delete>
+
+
+</mapper>

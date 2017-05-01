@@ -3,6 +3,7 @@ package com.fivedreamer.controller;
 import com.fivedreamer.config.MessageInfo;
 import com.fivedreamer.model.Tag;
 import com.fivedreamer.model.User;
+import com.fivedreamer.service.RelationshipService;
 import com.fivedreamer.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +25,9 @@ public class UserController {
 
     @Resource
     UserService userService;
+
+    @Resource
+    RelationshipService relationshipService;
 
     /**
      * @param session
@@ -133,7 +137,28 @@ public class UserController {
         return userService.updateUserPassword(id,oldPassword,newPassword);
     }
 
+    /**
+     * @param session
+     * @param fansid 粉丝ID
+     * @param model true为添加粉丝,false为删除粉丝
+     * @return 返回添加成功的结果
+     */
+    @RequestMapping("/user/relationship/update")
+    @ResponseBody
+    public MessageInfo updateRelationship(HttpSession session,int fansid,boolean model){
+        return relationshipService.updateRelationShip(((User)session.getAttribute("user")).getId(),fansid,model);
+    }
 
+    /**
+     * @param session
+     * @param fansid 粉丝ID
+     * @return 返回MessageInfo的对象,判断结果存在Object中.如果是粉丝返回Ture,否则返回False
+     */
+    @RequestMapping("/user/relationship/judge")
+    @ResponseBody
+    public MessageInfo isFans(HttpSession session,int fansid){
+        return relationshipService.isFans(((User)session.getAttribute("user")).getId(),fansid);
+    }
 
 
 }

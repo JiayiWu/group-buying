@@ -14,4 +14,19 @@
          ORDER BY m.time DESC
     </select>
 
+    <insert id="leaveMessage" parameterType="Comment" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO comments (formid,type,orderid,content,time) VALUE (#{formid},#{title},#{content},#{location},#{time},#{type})
+    </insert>
+
+    <insert id="replyMessage" parameterType="Comment" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO comments (formid,type,orderid,content,time,told) VALUE (#{formid},#{title},#{content},#{location},#{time},#{type},#{toid})
+    </insert>
+
+    <delete id="deleteMessage">
+        DELETE FROM comments WHERE id = #{0}
+    </delete>
+
+    <select id="getDetailComment">
+        SELECT * from comments WHERE id = #{0}
+    </select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.fivedreamer.mapper;
 
 import com.fivedreamer.model.CarOrder;
+import com.fivedreamer.model.CommonOrder;
 
 import java.util.List;
 
@@ -27,4 +28,24 @@ public interface CarOrderMapper {
      * 通过评论查找参与过的订单
      */
     public List<CarOrder> getCarOrderByComments(int id);
+
+    public List<CarOrder> getCarOrderListByType(String direction);
+
+    public String[] getAllDirection();
+
+    public CarOrder getCarOrderDetail(int id);
+
+    public int addCarOrder(CarOrder carOrder);
+
+    public List<CarOrder> getCarRecommendList();
+
+    public int modifyCarOrder(int id,String title,String content,String location,String direction,long time);
+
+    public int successOrder(int id);
+
+    public int deleteOrder(int id);
+
+    public int descMessageCount(int id);
+
+    public int ascMessageCount(int id);
 }

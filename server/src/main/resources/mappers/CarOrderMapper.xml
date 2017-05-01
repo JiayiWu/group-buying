@@ -26,4 +26,56 @@
         WHERE formid = #{0} AND TYPE = 0)) o  ,user u WHERE o.userid = u.id
     </select>
 
+
+    <select id="getCarOrderListByType"  resultType="CarOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_car WHERE direction = #{0} AND state = 0 ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <select id="getCarOrderDetail"  resultType="CarOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_car WHERE id = #{0}  ) o ,user u WHERE o.userid = u.id
+    </select>
+
+
+    <select id="getAllDirection"  resultType="java.lang.String">
+        SELECT direction FROM group_car
+    </select>
+
+    <insert id="addCarOrder" parameterType="CarOrder" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO group_car (userid,title,content,location,time,direction) VALUE (#{userid},#{title},#{content},#{location},#{time},#{direction})
+    </insert>
+
+
+    <select id="getCarRecommendList"  resultType="CarOrder">
+        SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,
+        o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,
+        u.nickname as username
+        FROM (SELECT * FROM group_car WHERE state = 0  ) o ,user u WHERE o.userid = u.id ORDER BY o.time DESC
+    </select>
+
+    <update id="modifyCarOrder">
+        UPDATE group_car SET  title = #{1} ,content = #{2}, location = #{3} , direction = #{4},time = #{5} WHERE id = #{0}
+    </update>
+
+    <update id="successOrder">
+        UPDATE group_car SET  state = 1 WHERE id = #{0}
+    </update>
+
+    <update id="deleteOrder">
+        UPDATE group_car SET  state = 2 WHERE id = #{0}
+    </update>
+
+    <update id="descMessageCount">
+        UPDATE group_mail SET  messageCount = messageCount -1 WHERE id = #{0}
+    </update>
+
+    <update id="ascMessageCount">
+        UPDATE group_mail SET  messageCount = messageCount +1 WHERE id = #{0}
+    </update>
+
 </mapper>

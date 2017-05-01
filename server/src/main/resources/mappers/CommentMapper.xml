@@ -11,6 +11,7 @@
         m.toid as toid,u2.nickname as toName, u2.iconUrl as toIconUrl,m.content as content,m.time as time FROM
         (SELECT o.id as id,o.formid as formid,u1.nickname as formName,u1.iconUrl as formIconUrl,
         o.told as toid,o.content as content,o.time as time FROM (SELECT * FROM comments WHERE type = #{0} AND orderid = #{1} ) o ,user u1 WHERE o.formid = u1.id) m LEFT JOIN user u2 ON m.toid = u2.id
+         ORDER BY m.time DESC
     </select>
 
 </mapper>

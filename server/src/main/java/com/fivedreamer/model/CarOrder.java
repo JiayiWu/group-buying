@@ -30,6 +30,18 @@ public class CarOrder {
 
     int messageCount;
 
+    public CarOrder() {
+    }
+
+    public CarOrder(int userid, String title, String content, String location, long time, String direction) {
+        this.userid = userid;
+        this.title = title;
+        this.content = content;
+        this.location = location;
+        this.time = time;
+        this.direction = direction;
+    }
+
     public int getId() {
         return id;
     }

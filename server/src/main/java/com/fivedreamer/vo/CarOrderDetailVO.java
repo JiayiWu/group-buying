@@ -1,5 +1,8 @@
 package com.fivedreamer.vo;
 
+import com.fivedreamer.model.CarOrder;
+import com.fivedreamer.utils.DataUtil;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -31,6 +34,23 @@ public class CarOrderDetailVO {
     private String direction;
     //留言
     private List<CommentVO> comments = new LinkedList<CommentVO>();
+
+
+    public CarOrderDetailVO() {
+    }
+
+    public CarOrderDetailVO(CarOrder carOrder) {
+        this.id = carOrder.getId();
+        this.username = carOrder.getUsername();
+        this.usericonurl = carOrder.getUsericonurl();
+        this.title = carOrder.getTitle();
+        this.content = carOrder.getContent();
+        this.location = carOrder.getLocation();
+        this.timeformate = DataUtil.getLongToDateString(carOrder.getTime());
+        this.direction = carOrder.getDirection();
+    }
+
+
 
     public int getId() {
         return id;
@@ -102,5 +122,13 @@ public class CarOrderDetailVO {
 
     public void setComments(List<CommentVO> comments) {
         this.comments = comments;
+    }
+
+    public String[] getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String[] imgPath) {
+        this.imgPath = imgPath;
     }
 }

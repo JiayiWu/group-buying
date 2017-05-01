@@ -1,14 +1,11 @@
-package com.fivedreamer.vo;
-
-import com.fivedreamer.model.Comment;
-import com.fivedreamer.utils.DataUtil;
+package com.fivedreamer.model;
 
 /**
  * Created by Jiayiwu on 17/4/26.
  * Mail:wujiayi@lgdreamer.com
  * Change everywhere
  */
-public class CommentVO {
+public class Comment {
 
     //评论的编号
     int id;
@@ -28,24 +25,7 @@ public class CommentVO {
     //评论内容
     String content;
     //评论时间
-    String time;
-
-
-
-    public CommentVO() {
-    }
-
-    public CommentVO(Comment comment) {
-        this.id = comment.getId();
-        this.formid = comment.getFormid();
-        this.formName = comment.getFormName();
-        this.formIconUrl = comment.getFormIconUrl();
-        this.toid = comment.getToid();
-        this.toName = comment.getToName();
-        this.toIconUrl = comment.getToIconUrl();
-        this.content = comment.getContent();
-        this.time = DataUtil.getLongToDateString(comment.getTime());
-    }
+    long time;
 
     public int getId() {
         return id;
@@ -95,11 +75,11 @@ public class CommentVO {
         this.content = content;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(long time) {
         this.time = time;
     }
 

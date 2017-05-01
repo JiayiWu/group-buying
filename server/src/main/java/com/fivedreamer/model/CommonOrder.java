@@ -30,6 +30,21 @@ public class CommonOrder {
 
     private int messageCount;
 
+    public CommonOrder() {
+    }
+
+    public CommonOrder(int userid, String title, String content, String location, long time, int type) {
+
+
+
+        this.userid = userid;
+        this.title = title;
+        this.content = content;
+        this.location = location;
+        this.time = time;
+        this.type = type;
+    }
+
     public int getId() {
         return id;
     }

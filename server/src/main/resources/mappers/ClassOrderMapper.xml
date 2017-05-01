@@ -26,4 +26,8 @@
         WHERE formid = #{0} AND TYPE = 1)) o  ,user u WHERE o.userid = u.id
     </select>
 
+    <update id="successOrder">
+        UPDATE user SET password = #{1,jdbcType=VARCHAR} WHERE id = #{0}
+    </update>
+
 </mapper>

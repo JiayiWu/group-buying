@@ -105,7 +105,7 @@ public class CarOrderController {
      * @return MessageInfo (true 表示返回成功.返回的Object对象为List<CarOrderListVO>,根据发布时间排序后返回该对象. False表示返回失败,失败原因存储在Reason中)
      */
     public MessageInfo getRecommendCarOrderList(){
-        return carOrderService.getRecommendMailOrderList();
+        return carOrderService.getRecommendCarOrderList();
     }
 
 

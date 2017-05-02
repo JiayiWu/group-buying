@@ -1,10 +1,12 @@
 package com.fivedreamer.controller;
 
 import com.fivedreamer.config.MessageInfo;
+import com.fivedreamer.service.CommonOrderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 
 
@@ -17,13 +19,16 @@ import javax.servlet.http.HttpSession;
 public class CommonOrderController {
 
 
+    @Resource
+    CommonOrderService commonOrderService;
+
     /**
      * @return MessageInfo (true 表示推荐成功,把MainSearchVO存储在Object中返回. False表示推荐失败,失败原因存储在Reason中)
      */
     @RequestMapping("/index/sort/recommend")
     @ResponseBody
     public MessageInfo getSortRecommend(){
-        return null;
+        return commonOrderService.getSortRecommend();
     }
 
     /**
@@ -33,7 +38,7 @@ public class CommonOrderController {
     @RequestMapping("/index/search")
     @ResponseBody
     public MessageInfo search(String search){
-        return null;
+        return commonOrderService.search(search);
     }
 
 
@@ -43,7 +48,7 @@ public class CommonOrderController {
     @RequestMapping("/index/recommend")
     @ResponseBody
     public MessageInfo getRecommend(){
-        return null;
+        return commonOrderService.getRecommend();
     }
 
 

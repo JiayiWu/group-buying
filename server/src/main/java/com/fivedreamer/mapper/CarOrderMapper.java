@@ -48,4 +48,6 @@ public interface CarOrderMapper {
     public int descMessageCount(int id);
 
     public int ascMessageCount(int id);
+
+    public List<CarOrder> getSearch(String keyWord);
 }

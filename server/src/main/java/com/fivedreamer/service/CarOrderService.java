@@ -116,7 +116,7 @@ public class CarOrderService {
         }
     }
 
-    public MessageInfo getRecommendMailOrderList(){
+    public MessageInfo getRecommendCarOrderList(){
         try {
             List<CarOrder> list = carOrderMapper.getCarRecommendList();
             List<CarOrderListVO> result = new LinkedList<CarOrderListVO>();
@@ -152,5 +152,9 @@ public class CarOrderService {
             e.printStackTrace();
             return new MessageInfo(false,"服务器错误,订单删除失败");
         }
+    }
+
+    public List<CarOrder> getSearch(String keyWord){
+       return carOrderMapper.getSearch(keyWord);
     }
 }

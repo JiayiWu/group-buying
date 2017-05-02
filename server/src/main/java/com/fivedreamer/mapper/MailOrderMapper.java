@@ -47,5 +47,7 @@ public interface MailOrderMapper {
 
     public int ascMessageCount(int id);
 
+    public List<CommonOrder> getSearch(String keyWord);
+
 
 }

@@ -138,4 +138,8 @@ public class MailOrderService {
             return new MessageInfo(false,"服务器错误,订单删除失败");
         }
     }
+
+    public List<CommonOrder> getSearch(String keyWord){
+        return mailOrderMapper.getSearch(keyWord);
+    }
 }

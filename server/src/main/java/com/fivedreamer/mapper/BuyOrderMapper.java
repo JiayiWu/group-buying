@@ -46,4 +46,6 @@ public interface BuyOrderMapper {
     public int descMessageCount(int id);
 
     public int ascMessageCount(int id);
+
+    public List<CommonOrder> getSearch(String keyWord);
 }

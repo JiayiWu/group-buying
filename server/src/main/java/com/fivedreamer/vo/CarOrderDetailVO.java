@@ -31,7 +31,7 @@ public class CarOrderDetailVO {
     private String[] imgPath;
 
     //拼车方向
-    private String direction;
+    private String type;
     //留言
     private List<CommentVO> comments = new LinkedList<CommentVO>();
 
@@ -47,7 +47,7 @@ public class CarOrderDetailVO {
         this.content = carOrder.getContent();
         this.location = carOrder.getLocation();
         this.timeformate = DataUtil.getLongToDateString(carOrder.getTime());
-        this.direction = carOrder.getDirection();
+        this.type = carOrder.getDirection();
     }
 
 
@@ -108,12 +108,12 @@ public class CarOrderDetailVO {
         this.timeformate = timeformate;
     }
 
-    public String getDirection() {
-        return direction;
+    public String getType() {
+        return type;
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public List<CommentVO> getComments() {

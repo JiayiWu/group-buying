@@ -58,8 +58,8 @@ public class MailOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
-    public MessageInfo addMailOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
-       return mailOrderService.addMailOrder(((User)session.getAttribute("user")).getId(),title,content,location,type,imgUrl);
+    public MessageInfo addMailOrder(HttpSession session,String title,String content,String location,int type,String imgUrl){
+       return mailOrderService.addMailOrder(((User)session.getAttribute("user")).getId(),title,content,location,type,imgUrl.split(" "));
     }
 
     @RequestMapping("/mail/order/modify")
@@ -73,8 +73,8 @@ public class MailOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
      */
-    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String[] imgUrl){
-        return mailOrderService.modifyOrder(id,title,content,location,type,imgUrl);
+    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String imgUrl){
+        return mailOrderService.modifyOrder(id,title,content,location,type,imgUrl.split(" "));
     }
 
     @RequestMapping("/mail/order/list")

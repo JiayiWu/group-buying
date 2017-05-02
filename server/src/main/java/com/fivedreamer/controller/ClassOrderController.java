@@ -61,8 +61,8 @@ public class ClassOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
-    public MessageInfo addClassOrder(HttpSession session,String title,String content,String location,int type,String[] imgUrl){
-        return classOrderService.addClassOrder(((User)session.getAttribute("user")).getId(),title,content,location,type,imgUrl);
+    public MessageInfo addClassOrder(HttpSession session,String title,String content,String location,int type,String imgUrl){
+        return classOrderService.addClassOrder(((User)session.getAttribute("user")).getId(),title,content,location,type,imgUrl.split(" "));
     }
 
     @RequestMapping("/class/order/modify")
@@ -76,8 +76,8 @@ public class ClassOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
      */
-    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String[] imgUrl){
-        return classOrderService.modifyOrder(id,title,content,location,type,imgUrl);
+    public MessageInfo modifyOrder(int id,String title,String content,String location,int type,String imgUrl){
+        return classOrderService.modifyOrder(id,title,content,location,type,imgUrl.split(" "));
     }
 
     @RequestMapping("/class/order/list")

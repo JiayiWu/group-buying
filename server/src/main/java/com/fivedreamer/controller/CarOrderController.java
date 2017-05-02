@@ -79,8 +79,8 @@ public class CarOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示添加订单成功. False表示添加失败,失败原因存储在Reason中)
      */
-    public MessageInfo addCarOrder(HttpSession session,String title,String content,String location,String direction,String[] imgUrl){
-        return carOrderService.addCarOrder(((User)session.getAttribute("user")).getId(),title,content,location,direction,imgUrl);
+    public MessageInfo addCarOrder(HttpSession session,String title,String content,String location,String direction,String imgUrl){
+        return carOrderService.addCarOrder(((User)session.getAttribute("user")).getId(),title,content,location,direction,imgUrl.split(" "));
     }
 
 
@@ -95,8 +95,8 @@ public class CarOrderController {
      * @param imgUrl 发布图片的URL
      * @return MessageInfo (true 表示修改订单成功. False表示修改失败,失败原因存储在Reason中)
      */
-    public MessageInfo modifyOrder(int id,String title,String content,String location,String direction,String[] imgUrl){
-        return carOrderService.modifyOrder(id,title,content,location,direction,imgUrl);
+    public MessageInfo modifyOrder(int id,String title,String content,String location,String direction,String imgUrl){
+        return carOrderService.modifyOrder(id,title,content,location,direction,imgUrl.split(" "));
     }
 
     @RequestMapping("/car/order/list")

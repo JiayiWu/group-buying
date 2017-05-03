@@ -1,0 +1,20 @@
+.modal-body p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#start{
+    display: inline;
+    width: 48%;
+    margin-right: 2%;
+}
+#end{
+    display: inline;
+    width: 48%;
+}
+tbody td{
+    padding-right: 0px;
+}
+a{
+    cursor:pointer;
+}

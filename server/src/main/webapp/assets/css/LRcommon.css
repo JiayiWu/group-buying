@@ -1,0 +1,209 @@
+/**
+    * Created by Jiayiwu on 16/10/18.
+    * Mail:wujiayi@lgdreamer.com
+    * Change everywhere
+    */
+.top-padding{
+    margin-top : 32px;
+}
+
+.bottom-padding {
+    margin-bottom : 32px;
+}
+
+.top-sm-padding {
+    margin-top: 16px;
+}
+
+.top-md-padding {
+    margin-top : 64px;
+}
+
+.bottom-md-padding {
+    margin-bottom: 64px;
+}
+
+.top-lg-padding {
+    margin-top : 128px;
+}
+
+.bottom-lg-padding {
+    margin-bottom : 128px;
+}
+
+.error {
+    border-color: #ff3524;
+}
+
+a.pointer {
+    cursor: pointer;
+    color: #666;
+}
+
+a.light-pointer {
+    cursor: pointer;
+    color: #445577;
+}
+
+.btn-main {
+    background-color: #555;
+    color: #fff;
+}
+
+.no-border {
+    border: none;
+}
+
+.full {
+    width: 100%;
+}
+
+.title {
+    color: #fff;
+}
+
+h1.title {
+    margin-bottom: 80px;
+}
+
+
+body{
+    background: url("../image/banner.jpg") repeat -180px 0px;
+}
+
+
+#loginpanel{
+    padding-left:0px;
+    padding-right:0px;
+   height: 350px;
+    background-color: #ffffff;
+}
+
+#loginpanel ul{
+    overflow: hidden;
+    padding-left: 0px;
+
+
+ border-bottom: 1px #eeeeee solid;
+ list-style: none;
+ font-family: "Microsoft YaHei";
+ font-size: 16px;
+ color: #aaaaaa;
+ margin-bottom: 35px;
+}
+
+#loginpanel ul li{
+    padding-top: 25px;
+    height: 65px;
+    text-align: center;
+    width: 33%;
+    float: left;
+    border-bottom: 1px #eeeeee solid;
+
+}
+
+#loginpanel ul li:hover{
+    cursor:pointer;
+
+}
+
+#loginpanel ul .active{
+    color: #ab8954;
+    border-bottom: 1px #ab8954 solid;
+}
+
+#loginpanel .form-group{
+    position: relative;
+    margin: 0 auto;
+    width: 340px;
+    text-align: center;
+}
+
+#loginpanel .icon{
+    position: absolute;
+    top: 6px;
+    left: 12px;
+
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 30px;
+}
+
+#loginpanel .input-jy{
+    padding-left: 50px;
+    width: 340px;
+    font-family: "Microsoft YaHei";
+    font-size: 14px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+#loginpanel .input-jy:focus{
+    outline: none;
+    /*border: 1px groove  #ab8954;*/
+    box-shadow: 0 0 5px #ab8954;
+    -webkit-box-shadow: 0 0 5px #ab8954;
+    -moz-box-shadow: 0 0 5px #ab8954;
+}
+
+#loginpanel .icon-user{
+
+    background-image: url(../image/icon/user.png);
+
+}
+
+
+
+#loginpanel .icon-password{
+    top: 7px;
+    background-image: url(../image/icon/password.png);
+
+}
+
+#loginpanel .l-focus-user{
+    background-image: url(../image/icon/userc.png);
+}
+
+#loginpanel .l-focus-password{
+    left: 11px;
+    background-image: url(../image/icon/passwordc.png);
+}
+
+#loginpanel  button[class~="btn-danger"]{
+    margin: 40px auto;width: 340px;height: 50px;display: block;margin-bottom: 0px;
+}
+
+
+#loginpanel div[role="register"]{
+    margin-top: 20px;
+margin-left: 8%;
+    font-size: 13px;
+}
+#loginpanel a[role="userRegister"]{
+color: #d9534f;
+}
+
+
+@media (max-width: 768px){
+    #loginpanel ul{
+        font-size: 10px;
+    }
+
+    #loginpanel .form-group{
+
+        width: 240px;
+
+    }
+
+    #loginpanel .input-jy{
+
+        width: 240px;
+
+    }
+
+    #loginpanel  button[class~="btn-danger"]{
+        height: 35px;
+        width: 240px;
+    }
+
+}

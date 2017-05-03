@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>主食</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="../assets/css/ie8.css"/><![endif]-->
+
+    <link rel="icon" href="../images/logo.ico">
+
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+
+    <!--<link rel="stylesheet" href="assets/css/main.css" />-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/init.css">
+    <link rel="stylesheet" href="assets/css/modal-common.css">
+    <link rel="stylesheet" href="http://oms8m8zuy.bkt.clouddn.com/sweetalert.css">
+    <link rel="stylesheet" href="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table.css">
+    <link rel="stylesheet" href="assets/css/manage-common.css">
+
+
+</head>
+<body >
+<!--<div id="page-wrapper">-->
+
+<!-- Header -->
+<header id="header">
+    <nav id="nav">
+
+
+        <ul>
+
+
+            <li><a href="index.html" class="icon ">首页</a>
+            </li>
+
+
+
+        </ul>
+    </nav>
+
+</header>
+
+<!--modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">新建订单</h4>
+            </div>
+            <div class="modal-body">
+
+
+
+                    <p>食物名称</p>
+                    <input type='text' class='form-control not-null' placeholder='食物名称' name='foodname' id="foodname">
+                <p>食物类型</p>
+                <select class="form-control" name="select" id="select_k1"  >
+                    <option value="no-carry">不可携带</option>
+                    <option value="carry">可携带</option>
+                </select>
+
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" id="confirmB" >确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+
+
+<div class="container">
+
+    <div class="row ">
+        <div class="col-md-2 col-md-offset-1  col-lg-2 col-lg-offset-1 hidden-sm hidden-xs tab-select">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li role="presentation" class="active" ><a href="mainfood.html">主食</a></li>
+                <li role="presentation"  ><a href="coldfood.html">冷饮</a></li>
+                <li role="presentation"  ><a href="hotfood.html">热饮</a></li>
+                <li role="presentation"  ><a href="snack.html">零食/水果</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8  " style="min-height: 300px" >
+            <div id="toolbar" >
+                <button id="add" class="btn btn-danger" >添加食物</button>
+                <button id="deleteC" class="btn btn-success">删除食物</button>
+
+
+            </div>
+            <table id="tablepool"
+                   data-mobile-responsive="true"
+                   data-check-on-init="true"
+                   data-key-events="true"
+                   data-search="true"
+                   data-pagination="true"
+                   data-row-style="rowStyle"
+                   data-pageNumber="1"
+                   data-pageSize="10"
+                   data-pageList="[10, 25, 50, 100]"
+                   data-clickToSelect="true"
+                   data-toolbar = '#toolbar'
+                   >
+                <thead>
+                <tr>
+                    <th data-field="check" data-checkbox="true"
+                        ></th>
+                    <th data-field="id" class="un-watch">ID</th>
+                    <th data-field="foodName">食物名称</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+
+    <ul class="copyright">
+        <li>&copy;2014-2017 <a href="http://www.fivedreamer.com">Steven</a></li>
+    </ul>
+</footer>
+
+<!--</div>-->
+
+<!-- Scripts -->
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.dropotron.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.scrollgress.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/skel.min.js"></script>
+<!--[if lte IE 8]>
+<script src="http://oms8m8zuy.bkt.clouddn.com/respond.min.js"></script><![endif]-->
+
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table-zh-CN.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/sweetalert.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.tmpl.min.js"></script>
+<script src="http://oog9z6463.bkt.clouddn.com/manageFood.js"></script>
+<script src="http://oog9z6463.bkt.clouddn.com/manage.js"></script>
+
+
+</body>
+</html>

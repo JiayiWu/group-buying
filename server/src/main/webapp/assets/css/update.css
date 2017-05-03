@@ -1,0 +1,37 @@
+
+ul li{
+    padding-left: 0px;
+}
+.tab-select{
+
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 0;
+    margin-right: 15px;
+}
+.main-panel{
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 20px;
+min-height: 300px;
+    background-color: #ffffff;
+    padding-bottom: 20px;
+    border: 1px solid #ebebeb;
+
+}
+.main-panel span{
+    font-size: 20px;
+}
+.main-panel input{
+    margin: 20px auto;
+    width: 60%;
+}
+
+.main-panel textarea{
+    margin: 20px auto;
+    width: 60%;
+}
+
+.main-panel button{
+    width: 30%;
+}

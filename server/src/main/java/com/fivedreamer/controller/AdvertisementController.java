@@ -52,7 +52,14 @@ public class AdvertisementController {
      */
     @RequestMapping("/advertisement/list")
     @ResponseBody
-    public Object getAdvertisementList(){
-        return advertisementService.getAdvertisementList().getObject();
+    public MessageInfo getAdvertisementList(){
+        return advertisementService.getAdvertisementList();
+    }
+
+
+    @RequestMapping("/advertisement/back/list")
+    @ResponseBody
+    public Object getAdvertisementBackList(){
+        return advertisementService.getAdvertisementBackList().getObject();
     }
 }

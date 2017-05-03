@@ -44,9 +44,11 @@ public class AdvertisementService {
         return new MessageInfo(false,"服务器错误,广告修改失败");
     }
 
-    public MessageInfo deleteAdvertisement(int id){
+    public MessageInfo deleteAdvertisement(String[] id){
         try {
-            advertisementMapper.deleteAdvertisement(id);
+            for (String tem:id) {
+                advertisementMapper.deleteAdvertisement(Integer.parseInt(tem));
+            }
             return new MessageInfo(true,"广告删除成功");
         }catch (Exception e){
             e.printStackTrace();
@@ -59,6 +61,10 @@ public class AdvertisementService {
 
         try {
             List<Advertisement> list = advertisementMapper.getAdvertisementList();
+            for (int i =0;i<list.size();i++){
+                Advertisement tem = list.get(i);
+                tem.setImgURL(tem.getImgURL().length()>30?tem.getImgURL().substring(0,30)+"......":tem.getImgURL());
+            }
             return new MessageInfo(true,list,"广告列表获取成功");
         }catch (Exception e){
             e.printStackTrace();

@@ -53,19 +53,19 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title">新建订单</h4>
+                <h4 class="modal-title">广告管理系统</h4>
             </div>
             <div class="modal-body">
 
 
 
-                    <p>食物名称</p>
-                    <input type='text' class='form-control not-null' placeholder='食物名称' name='foodname' id="foodname">
-                <p>食物类型</p>
-                <select class="form-control" name="select" id="select_k1"  >
-                    <option value="no-carry">不可携带</option>
-                    <option value="carry">可携带</option>
-                </select>
+                    <p>广告图片URL</p>
+                    <input type='text' class='form-control not-null' placeholder='图片URL' name='picurl' id="picurl">
+                <p>广告介绍</p>
+                <input type='text' class='form-control not-null' placeholder='文字介绍' name='content' id="content">
+                <p>广告跳转链接</p>
+                <input type='text' class='form-control not-null' placeholder='跳转链接' name='target' id="target">
+
 
 
 
@@ -85,16 +85,15 @@
     <div class="row ">
         <div class="col-md-2 col-md-offset-1  col-lg-2 col-lg-offset-1 hidden-sm hidden-xs tab-select">
             <ul class="nav nav-pills nav-stacked" role="tablist">
-                <li role="presentation" class="active" ><a href="mainfood.html">主食</a></li>
-                <li role="presentation"  ><a href="coldfood.html">冷饮</a></li>
-                <li role="presentation"  ><a href="hotfood.html">热饮</a></li>
-                <li role="presentation"  ><a href="snack.html">零食/水果</a></li>
+                <li role="presentation" class="active" ><a href="main.html">广告管理</a></li>
+                <li role="presentation"  ><a href="coldfood.html">账户管理</a></li>
+
             </ul>
         </div>
         <div class="col-md-8  " style="min-height: 300px" >
             <div id="toolbar" >
-                <button id="add" class="btn btn-danger" >添加食物</button>
-                <button id="deleteC" class="btn btn-success">删除食物</button>
+                <button id="add" class="btn btn-danger" >添加广告</button>
+                <button id="deleteC" class="btn btn-success">删除广告</button>
 
 
             </div>
@@ -115,8 +114,10 @@
                 <tr>
                     <th data-field="check" data-checkbox="true"
                         ></th>
-                    <th data-field="id" class="un-watch">ID</th>
-                    <th data-field="foodName">食物名称</th>
+                    <th  data-field="id" class="un-watch">ID</th>
+                    <th  data-field="imgURL">图片URL</th>
+                    <th  data-field="contents">文字介绍</th>
+                    <th  data-field="targetURL">跳转链接</th>
                 </tr>
                 </thead>
             </table>
@@ -151,8 +152,7 @@
 <script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table-zh-CN.js"></script>
 <script src="http://oms8m8zuy.bkt.clouddn.com/sweetalert.min.js"></script>
 <script src="http://oms8m8zuy.bkt.clouddn.com/jquery.tmpl.min.js"></script>
-<script src="http://oog9z6463.bkt.clouddn.com/manageFood.js"></script>
-<script src="http://oog9z6463.bkt.clouddn.com/manage.js"></script>
+<script src="assets/js/manage.js"></script>
 
 
 </body>

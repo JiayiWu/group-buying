@@ -34,18 +34,7 @@ public class AdvertisementController {
     }
 
 
-    /**
-     * @param id 广告ID
-     * @param imgURL  广告图片URL
-     * @param contents 广告文本内容
-     * @param targetURL 跳转URL
-     * @return MessageInfo(True 则为广告修改成功,修改成功的对象放在 Object中.对象类型是Advertisement. False 则为修改失败,具体失败原因存储在Reason中)
-     */
-    @RequestMapping("/advertisement/update")
-    @ResponseBody
-    public MessageInfo updateAdvertisement(int id,String imgURL,String contents,String targetURL){
-        return advertisementService.updateAdvertisement(id,imgURL,contents,targetURL);
-    }
+
 
 
     /**
@@ -54,7 +43,7 @@ public class AdvertisementController {
      */
     @RequestMapping("/advertisement/delete")
     @ResponseBody
-    public MessageInfo deleteAdvertisement(int id){
+    public MessageInfo deleteAdvertisement(String[] id){
         return advertisementService.deleteAdvertisement(id);
     }
 
@@ -63,7 +52,7 @@ public class AdvertisementController {
      */
     @RequestMapping("/advertisement/list")
     @ResponseBody
-    public MessageInfo getAdvertisementList(){
-        return advertisementService.getAdvertisementList();
+    public Object getAdvertisementList(){
+        return advertisementService.getAdvertisementList().getObject();
     }
 }

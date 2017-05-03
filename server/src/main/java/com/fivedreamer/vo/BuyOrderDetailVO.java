@@ -25,7 +25,7 @@ public class BuyOrderDetailVO {
     private String content;
     //订单发布者位置
     private String location;
-    //订单本地时间表述 如2017-04-26 13:26:16
+
     private long time;
 
     //订单详细图片信息

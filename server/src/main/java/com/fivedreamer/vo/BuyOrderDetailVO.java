@@ -1,7 +1,6 @@
 package com.fivedreamer.vo;
 
 import com.fivedreamer.model.CommonOrder;
-import com.fivedreamer.utils.DataUtil;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -14,6 +13,8 @@ import java.util.List;
 public class BuyOrderDetailVO {
     //订单号
     private int id;
+    //订单所属人ID
+    private int userid;
     //订单发起人昵称
     private String username;
     //订单发起人头像
@@ -25,7 +26,7 @@ public class BuyOrderDetailVO {
     //订单发布者位置
     private String location;
     //订单本地时间表述 如2017-04-26 13:26:16
-    private String timeformate;
+    private long time;
 
     //订单详细图片信息
     private String[] imgPath;
@@ -38,12 +39,13 @@ public class BuyOrderDetailVO {
 
     public BuyOrderDetailVO(CommonOrder commonOrder) {
         this.id = commonOrder.getId();
+        this.userid = commonOrder.getUserid();
         this.username = commonOrder.getUsername();
         this.usericonurl = commonOrder.getUsericonurl();
         this.title = commonOrder.getTitle();
         this.content = commonOrder.getContent();
         this.location = commonOrder.getLocation();
-        this.timeformate = DataUtil.getLongToDateString(commonOrder.getTime());
+        this.time = commonOrder.getTime();
         switch (commonOrder.getType()){
             case 0:
                 this.type = "吃喝";
@@ -109,12 +111,20 @@ public class BuyOrderDetailVO {
         this.location = location;
     }
 
-    public String getTimeformate() {
-        return timeformate;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setTimeformate(String timeformate) {
-        this.timeformate = timeformate;
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 
     public String getType() {

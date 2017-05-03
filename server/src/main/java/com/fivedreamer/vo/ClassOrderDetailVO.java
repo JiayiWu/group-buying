@@ -14,6 +14,8 @@ import java.util.List;
 public class ClassOrderDetailVO {
     //订单号
     private int id;
+    //订单发起人id
+    private int userid;
     //订单发起人昵称
     private String username;
     //订单发起人头像
@@ -25,7 +27,7 @@ public class ClassOrderDetailVO {
     //订单发布者位置
     private String location;
     //订单本地时间表述 如2017-04-26 13:26:16
-    private String timeformate;
+    private long time;
 
     //订单详细图片信息
     private String[] imgPath;
@@ -37,13 +39,14 @@ public class ClassOrderDetailVO {
 
 
     public ClassOrderDetailVO(CommonOrder commonOrder) {
+        this.userid = commonOrder.getUserid();
         this.id = commonOrder.getId();
         this.username = commonOrder.getUsername();
         this.usericonurl = commonOrder.getUsericonurl();
         this.title = commonOrder.getTitle();
         this.content = commonOrder.getContent();
         this.location = commonOrder.getLocation();
-        this.timeformate = DataUtil.getLongToDateString(commonOrder.getTime());
+        this.time = commonOrder.getTime();
         switch (commonOrder.getType()){
             case 0:
                 this.type = "雅思托福";
@@ -122,12 +125,12 @@ public class ClassOrderDetailVO {
         this.location = location;
     }
 
-    public String getTimeformate() {
-        return timeformate;
+    public long getTime() {
+        return time;
     }
 
-    public void setTimeformate(String timeformate) {
-        this.timeformate = timeformate;
+    public void setTime(long time) {
+        this.time = time;
     }
 
     public String getType() {

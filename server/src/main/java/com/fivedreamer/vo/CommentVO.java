@@ -28,7 +28,7 @@ public class CommentVO {
     //评论内容
     String content;
     //评论时间
-    String time;
+    long time;
 
 
 
@@ -44,7 +44,7 @@ public class CommentVO {
         this.toName = comment.getToName();
         this.toIconUrl = comment.getToIconUrl();
         this.content = comment.getContent();
-        this.time = DataUtil.getLongToDateString(comment.getTime());
+        this.time = comment.getTime();
     }
 
     public int getId() {
@@ -95,11 +95,11 @@ public class CommentVO {
         this.content = content;
     }
 
-    public String getTime() {
+    public long getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(long time) {
         this.time = time;
     }
 

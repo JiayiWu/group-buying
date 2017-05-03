@@ -160,5 +160,14 @@ public class UserController {
         return relationshipService.isFans(((User)session.getAttribute("user")).getId(),fansid);
     }
 
+    @RequestMapping("/user/info/id")
+    @ResponseBody
+    public MessageInfo getOwnerID(HttpSession session){
+        Object user =  session.getAttribute("user");
+        if (user != null){
+            return new MessageInfo(true,((User)user).getId(),"ID获取成功");
+        }
+        return new MessageInfo(false,"请登录");
+    }
 
 }

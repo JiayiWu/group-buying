@@ -14,6 +14,8 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
     protected String username;
     //订单发起人头像
     protected String usericonurl;
+    //订单发起人ID
+    protected int userid;
     //订单主题
     protected String title;
     //订单内容
@@ -115,6 +117,14 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
 
     public void setLeaveMessageCount(int leaveMessageCount) {
         this.leaveMessageCount = leaveMessageCount;
+    }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
     }
 
     public int compareTo(GroupBuyOrderRecommendListVO o) {

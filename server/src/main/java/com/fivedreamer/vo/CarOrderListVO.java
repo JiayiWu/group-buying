@@ -16,6 +16,7 @@ public class CarOrderListVO extends GroupBuyOrderRecommendListVO {
     }
 
     public CarOrderListVO(CarOrder carOrder){
+        this.userid = carOrder.getUserid();
         this.id = carOrder.getId();
         this.ordertype = 0;
         this.username = carOrder.getUsername();

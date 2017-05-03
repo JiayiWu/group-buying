@@ -14,6 +14,8 @@ import java.util.List;
 public class CarOrderDetailVO {
     //订单号
     private int id;
+    //订单发起人ID
+    private int userid;
     //订单发起人昵称
     private String username;
     //订单发起人头像
@@ -25,7 +27,7 @@ public class CarOrderDetailVO {
     //订单发布者位置
     private String location;
     //订单本地时间表述 如2017-04-26 13:26:16
-    private String timeformate;
+    private long time;
 
     //订单详细图片信息
     private String[] imgPath;
@@ -41,12 +43,13 @@ public class CarOrderDetailVO {
 
     public CarOrderDetailVO(CarOrder carOrder) {
         this.id = carOrder.getId();
+        this.userid = carOrder.getUserid();
         this.username = carOrder.getUsername();
         this.usericonurl = carOrder.getUsericonurl();
         this.title = carOrder.getTitle();
         this.content = carOrder.getContent();
         this.location = carOrder.getLocation();
-        this.timeformate = DataUtil.getLongToDateString(carOrder.getTime());
+        this.time = carOrder.getTime();
         this.type = carOrder.getDirection();
     }
 
@@ -100,12 +103,20 @@ public class CarOrderDetailVO {
         this.location = location;
     }
 
-    public String getTimeformate() {
-        return timeformate;
+    public int getUserid() {
+        return userid;
     }
 
-    public void setTimeformate(String timeformate) {
-        this.timeformate = timeformate;
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 
     public String getType() {

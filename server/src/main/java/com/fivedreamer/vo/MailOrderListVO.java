@@ -14,6 +14,7 @@ public class MailOrderListVO extends GroupBuyOrderRecommendListVO {
     }
 
     public MailOrderListVO(CommonOrder commonOrder){
+        this.userid = commonOrder.getUserid();
         this.id = commonOrder.getId();
         this.ordertype = 2;
         this.username = commonOrder.getUsername();

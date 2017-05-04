@@ -42,8 +42,8 @@ public class CommentsService {
 
     public MessageInfo replyMessage(int id,int orderid,int orderType,String content,int replyid){
         try{
-            CommentPO commentPO = new CommentPO(id,orderid,orderType,orderid,content,System.currentTimeMillis());
-            commentsMapper.leaveMessage(commentPO);
+            CommentPO commentPO = new CommentPO(id,replyid,orderType,orderid,content,System.currentTimeMillis());
+            commentsMapper.replyMessage(commentPO);
             ascMessageCount(orderType,orderid);
             return new MessageInfo(true,commentPO,"评论成功") ;
         }catch (Exception e){

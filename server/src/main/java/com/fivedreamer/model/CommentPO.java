@@ -9,7 +9,7 @@ public class CommentPO {
 
     private int id;
     private int formid;
-    private int toid;
+    private int toid = -1;
     private int type;
     private int orderid;
     private String content;

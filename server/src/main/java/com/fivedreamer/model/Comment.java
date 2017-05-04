@@ -17,7 +17,7 @@ public class Comment {
     //评论人的图像URL
     String formIconUrl;
     //被评论人ID(为-1则表示为评论)
-    int toid;
+    int toid = -1;
     //被评论人的昵称(为Null则表示该信息为评论,否则为回复)
     String toName;
     //被评论人的图像URL(为Null则表示该信息为评论,否则为回复)

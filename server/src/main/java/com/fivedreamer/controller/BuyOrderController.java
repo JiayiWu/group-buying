@@ -32,6 +32,15 @@ public class BuyOrderController {
         return buyOrderService.getTypeList(type);
     }
 
+    /**
+     * @return MessageInfo (true 表示返回该类型的订单成功,Object为List<List<BuyOrderListVO>>类型,存储的在该类型上的订单. False表示返回失败,失败原因存储在Reason中)
+     */
+    @RequestMapping("/buy/type/list")
+    @ResponseBody
+    public MessageInfo getSortTypeList(){
+        return  buyOrderService.getSortTypeList();
+    }
+
 
 
 

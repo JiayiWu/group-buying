@@ -35,6 +35,16 @@ public class MailOrderController {
         return mailOrderService.getTypeList(type);
     }
 
+    /**
+     * @return MessageInfo (true 表示返回该方向的订单成功,Object为List<MailOrderListVO>类型,存储的在该类型上的订单. False表示返回失败,失败原因存储在Reason中)
+     */
+    @RequestMapping("/mail/type/list")
+    @ResponseBody
+    public MessageInfo getTypeSortList(){
+
+        return mailOrderService.getTypeList();
+    }
+
 
     @RequestMapping("/mail/order/index")
     @ResponseBody

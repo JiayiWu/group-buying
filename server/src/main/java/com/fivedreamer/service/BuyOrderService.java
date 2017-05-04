@@ -47,6 +47,14 @@ public class BuyOrderService {
         }
     }
 
+    public MessageInfo getSortTypeList(){
+        List<List<BuyOrderListVO>>result = new LinkedList<List<BuyOrderListVO>>();
+        for (int i = 0;i<4;i++){
+            result.add((List<BuyOrderListVO>) getTypeList(i).getObject());
+        }
+        return new MessageInfo(true,result,"获取成功");
+    }
+
 
     public MessageInfo getBuyOrderDetail(int id){
         try {

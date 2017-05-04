@@ -48,6 +48,14 @@ public class MailOrderService {
         }
     }
 
+    public MessageInfo getTypeList(){
+        List<List<MailOrderListVO>> result = new LinkedList<List<MailOrderListVO>>();
+        for (int i=0;i<8;i++){
+            result.add((List<MailOrderListVO>)getTypeList(i).getObject());
+        }
+        return new MessageInfo(true,result,"获取成功");
+    }
+
 
     public MessageInfo getMailOrderDetail(int id){
         try {

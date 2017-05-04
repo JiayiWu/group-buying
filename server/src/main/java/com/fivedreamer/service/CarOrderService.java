@@ -59,6 +59,15 @@ public class CarOrderService {
         }
     }
 
+    public MessageInfo getDirectionList(){
+        String [] tem = (String [])getAllDirection().getObject();
+        List<List<CarOrder>> result = new LinkedList<List<CarOrder>>();
+        for (String tem1:tem){
+            result.add((List<CarOrder>)getDirectionList(tem1).getObject());
+        }
+        return new MessageInfo(true,result,"获取成功");
+    }
+
 
     public MessageInfo getCarOrderDetail(int id){
         try {

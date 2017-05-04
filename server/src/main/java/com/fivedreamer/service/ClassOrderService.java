@@ -46,6 +46,14 @@ public class ClassOrderService {
         }
     }
 
+    public MessageInfo getTypeList(){
+        List<List<ClassOrderListVO>> result = new LinkedList<List<ClassOrderListVO>>();
+        for (int i = 0;i<8;i++){
+            result.add((List<ClassOrderListVO>)getTypeList(i).getObject());
+        }
+        return new MessageInfo(true,result,"获取成功");
+    }
+
 
     public MessageInfo getClassOrderDetail(int id){
         try {

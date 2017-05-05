@@ -24,6 +24,10 @@ public class User {
     String iconUrl;
 
     String backgroundUrl;
+    //是否认证
+    boolean authentication;
+    //学生证URL
+    String sic_url;
 
     public User() {
     }
@@ -120,5 +124,21 @@ public class User {
 
     public void setBackgroundUrl(String backgroundUrl) {
         this.backgroundUrl = backgroundUrl;
+    }
+
+    public boolean isAuthentication() {
+        return authentication;
+    }
+
+    public void setAuthentication(boolean authentication) {
+        this.authentication = authentication;
+    }
+
+    public String getSic_url() {
+        return sic_url;
+    }
+
+    public void setSic_url(String sic_url) {
+        this.sic_url = sic_url;
     }
 }

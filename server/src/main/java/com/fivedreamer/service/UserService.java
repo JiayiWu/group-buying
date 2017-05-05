@@ -210,6 +210,37 @@ public class UserService {
         return new MessageInfo(false,"用户不存在");
     }
 
+    public MessageInfo updateAuthentication(int id,String url){
+        try {
+
+            userMapper.updateAuthentication(id,url);
+            return new MessageInfo(true,"认证成功");
+
+        }catch (Exception e){
+            e.printStackTrace();
+            return new MessageInfo(false,"服务器错误,修改失败");
+        }
+    }
+
+    public MessageInfo isAuthentication(int id){
+        try{
+            User user = userMapper.getUser(id);
+            return new MessageInfo(true,user.isAuthentication(),"获取认证信息成功");
+        }catch (Exception e){
+            e.printStackTrace();
+            return new MessageInfo(false,"服务器错误,修改失败");
+        }
+    }
+
+    public MessageInfo getSIC_URL(int id){
+        try{
+            User user = userMapper.getUser(id);
+            return new MessageInfo(true,user.getSic_url(),"获取学生证图片信息成功");
+        }catch (Exception e){
+            e.printStackTrace();
+            return new MessageInfo(false,"服务器错误,修改失败");
+        }
+    }
 
 
 

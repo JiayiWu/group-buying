@@ -30,6 +30,8 @@ public interface UserMapper {
 
     public int updatePassword(int id,String password);
 
+    public int updateAuthentication(int id,String url);
+
 
 
 

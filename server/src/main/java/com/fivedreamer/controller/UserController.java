@@ -170,4 +170,31 @@ public class UserController {
         return new MessageInfo(false,"请登录");
     }
 
+    /**
+     * 上传认证信息
+     */
+    @RequestMapping("/user/authentication/id")
+    @ResponseBody
+    public MessageInfo updateAuthentication(HttpSession session,String url){
+            return userService.updateAuthentication(((User)session.getAttribute("user")).getId(),url);
+    }
+
+    /**
+     * 获取用户是否认证
+     */
+    @RequestMapping("/user/authentication/index")
+    @ResponseBody
+    public MessageInfo isAuthentication(HttpSession session){
+        return userService.isAuthentication(((User)session.getAttribute("user")).getId());
+    }
+
+    /**
+     * 获取用户认证的URL
+     */
+    @RequestMapping("/user/authentication/url")
+    @ResponseBody
+    public MessageInfo getSIC_URL(HttpSession session){
+        return userService.getSIC_URL(((User)session.getAttribute("user")).getId());
+    }
+
 }

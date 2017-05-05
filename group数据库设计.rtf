@@ -15,6 +15,8 @@ sex varchar(10),\
 successCount int DEFAULT 0,\
 iconUrl varchar(255) binary ,\
 backgroundUrl varchar(255) binary,\
+authentication boolean DEFAULT 0,\
+sic_url varchar(255),\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f1 \cf0 primary key(id)
@@ -224,7 +226,7 @@ password text NOT NULL,\
 )\
 \
 \
-SELECT o.id as id,o.userid as userid,o.title as title,o.content as content,o.location as location,o.time as time, o.direction as direction,o.messageCount as messageCount,u.iconUrl as usericonurl,u.nickname as username FROM (SELECT * FROM group_car WHERE userid = 1 AND state = 0 ) o ,user u WHERE o.userid = u.id;\
+\
 \
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 

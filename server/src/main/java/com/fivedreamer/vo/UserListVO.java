@@ -12,6 +12,8 @@ public class UserListVO {
     private String userName;
     //粉丝URL
     private String iconUrl;
+    //是否经过学生证认证
+    private boolean authentication = false;
 
 
     public UserListVO() {
@@ -45,5 +47,13 @@ public class UserListVO {
 
     public void setIconUrl(String iconUrl) {
         this.iconUrl = iconUrl;
+    }
+
+    public boolean isAuthentication() {
+        return authentication;
+    }
+
+    public void setAuthentication(boolean authentication) {
+        this.authentication = authentication;
     }
 }

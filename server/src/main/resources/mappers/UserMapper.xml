@@ -5,7 +5,7 @@
 <mapper namespace="com.fivedreamer.mapper.UserMapper">
 
     <select id="getUserInfo"  resultType="UserInfoVO">
-        SELECT u.id as id,u.telephone as telephone ,u.nickname as nickname,u.school as school,u.sex as sex,
+        SELECT u.id as id,u.telephone as telephone ,u.authentication as authentication,u.nickname as nickname,u.school as school,u.sex as sex,
         u.successCount as successCount, u.iconUrl as iconUrl ,u.backgroundUrl as backgroundUrl ,fans.count as fansCount,
         focus.count as focusCount
         FROM user u,(select COUNT(*) as count FROM relationship WHERE ownerid = #{0}) fans,
@@ -17,11 +17,11 @@
     </select>
 
     <select id="getFansList"  resultType="UserListVO">
-        SELECT id ,nickname as userName, iconUrl FROM user WHERE id IN (SELECT fansid FROM relationship WHERE ownerid = #{0})
+        SELECT id ,nickname as userName, iconUrl ,authentication FROM user WHERE id IN (SELECT fansid FROM relationship WHERE ownerid = #{0})
     </select>
 
     <select id="getFocusList"  resultType="UserListVO">
-        SELECT id ,nickname as userName, iconUrl FROM user WHERE id IN (SELECT ownerid FROM relationship WHERE fansid = #{0})
+        SELECT id ,nickname as userName, iconUrl ,authentication FROM user WHERE id IN (SELECT ownerid FROM relationship WHERE fansid = #{0})
     </select>
 
     <update id="updateUserInfo">
@@ -30,6 +30,10 @@
 
     <update id="updatePassword">
         UPDATE user SET password = #{1,jdbcType=VARCHAR} WHERE id = #{0}
+    </update>
+
+    <update id="updateAuthentication">
+        UPDATE user SET sic_url = #{1,jdbcType=VARCHAR},authentication = 1 WHERE id = #{0}
     </update>
 
 

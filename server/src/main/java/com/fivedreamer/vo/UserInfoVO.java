@@ -41,6 +41,8 @@ public class UserInfoVO {
     private int commentCount;
     //用户相关的标签
     private List<Tag> tags;
+    //是否经过学生证认证
+    private boolean authentication;
 
     public UserInfoVO() {
     }
@@ -181,5 +183,13 @@ public class UserInfoVO {
 
     public void setTags(List<Tag> tags) {
         this.tags = tags;
+    }
+
+    public boolean isAuthentication() {
+        return authentication;
+    }
+
+    public void setAuthentication(boolean authentication) {
+        this.authentication = authentication;
     }
 }

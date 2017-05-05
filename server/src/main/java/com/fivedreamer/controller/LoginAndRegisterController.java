@@ -33,7 +33,7 @@ public class LoginAndRegisterController {
     @RequestMapping("/register")
     @ResponseBody
     public MessageInfo register(HttpSession session, String phoneNumber, String password) {
-        User tem = new User(phoneNumber,"用户"+phoneNumber, SHA256Util.Encrypt(password),"学校未选择","男","","");
+        User tem = new User(phoneNumber,"用户"+phoneNumber, password,"学校未选择","男","","");
         MessageInfo messageInfo = loginAndRegisterService.register(tem);
         if (messageInfo.isResult()){
             session.setAttribute("user",messageInfo.getObject());

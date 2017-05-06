@@ -53,4 +53,6 @@ public class ClassOrderListVO extends GroupBuyOrderRecommendListVO {
         this.leaveMessageCount = commonOrder.getMessageCount();
     }
 
+
+
 }

@@ -23,29 +23,69 @@ function init() {
 
 function addAD() {
     jQuery.ajax({
-        url: 'advertisement/add',
-        type: 'post',
-        dataType: 'json',
-        data: {
-            imgURL: $('#picurl').val(),
-            contents: $('#content').val(),
-            targetURL: $('#target').val()
-        },
-        success: function(data) {
-            if (data.result == true) {
-                swal("成功", "添加成功", "success");
-                $('#picurl').val("");
-                $('#content').val("");
-                $('#target').val("");
-                $('#tablepool').bootstrapTable('refresh')
-            } else {
-                swal("失败", "出错啦!联系下管理员吧", "error")
+        url: "auth/token",
+        type: "post",
+        success: function(result) {
+            var token = result.object;
+            var file = $("#picurl")[0].files[0];
+            var formData = new FormData();
+            formData.append("token", token);
+            formData.append("file", file);
+            var xhr = sendXML("http://up.qiniu.com", "POST", formData);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    var resp = xhr.response;
+                    var qiniu_url = "http://op8aopzaq.bkt.clouddn.com/" + resp.key;
+                    jQuery.ajax({
+                        url: 'advertisement/add',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                            imgURL: qiniu_url,
+                            contents: $('#content').val(),
+                            targetURL: $('#target').val()
+                        },
+                        success: function(data) {
+                            if (data.result == true) {
+                                swal("成功", "添加成功", "success");
+                                $('#picurl').val("");
+                                $('#content').val("");
+                                $('#target').val("");
+                                $('#tablepool').bootstrapTable('refresh')
+                            } else {
+                                swal("失败", "出错啦!联系下管理员吧", "error")
+                            }
+                        },
+                        error: function(data) {
+                            swal("OMG", "服务器错误,联系下管理员吧!", "error")
+                        }
+                    })
+                }
             }
         },
-        error: function(data) {
-            swal("OMG", "服务器错误,联系下管理员吧!", "error")
+        error: function() {
+            swal("OMG", "go out", "error")
         }
     })
+}
+
+function sendXML(url, type, data) {
+    var xhr;
+    if (window.ActiveXObject) {
+        xhr = new ActiveXObject("Microsoft.XMLHTTP")
+    } else if (window.XMLHttpRequest) {
+        xhr = new XMLHttpRequest()
+    }
+    xhr.open(type, url);
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        console.log(xhr.response)
+    };
+    xhr.onerror = function() {
+        console.log("error")
+    };
+    xhr.send(data);
+    return xhr
 }
 
 function deleteAD() {

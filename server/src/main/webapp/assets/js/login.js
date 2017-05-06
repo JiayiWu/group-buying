@@ -1,1 +1,21 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('$(1(){$("#4").c(1(){a.f({b:\'e/4\',h:\'g\',d:\'9\',0:{5:$(\'#5\').6(),3:$(\'#3\').6()},q:1(0){p(0.o==t){s.r=\'k.j\'}i 8("7","n","2")},2:1(0){8("7","m,l!","2")}})})});',30,30,'data|function|error|password|login|username|val|OMG|swal|json|jQuery|url|click|dataType|ad|ajax|post|type|else|html|main|请稍后重试|服务器错误|账号密码错误|result|if|success|location|top|true'.split('|'),0,{}))
+$(function() {
+    $("#login").click(function() {
+        jQuery.ajax({
+            url: 'ad/login',
+            type: 'post',
+            dataType: 'json',
+            data: {
+                username: $('#username').val(),
+                password: $('#password').val()
+            },
+            success: function(data) {
+                if (data.result == true) {
+                    top.location = 'main.html'
+                } else swal("OMG", "账号密码错误", "error")
+            },
+            error: function(data) {
+                swal("OMG", "服务器错误,请稍后重试!", "error")
+            }
+        })
+    })
+});

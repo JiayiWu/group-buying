@@ -134,4 +134,6 @@ public class GroupBuyOrderRecommendListVO implements Comparable<GroupBuyOrderRec
             return 1;
         return 0;
     }
+
+
 }

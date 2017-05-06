@@ -156,4 +156,12 @@ public class ClassOrderDetailVO {
     public void setImgPath(String[] imgPath) {
         this.imgPath = imgPath;
     }
+
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
 }

@@ -142,4 +142,6 @@ public class CarOrderDetailVO {
     public void setImgPath(String[] imgPath) {
         this.imgPath = imgPath;
     }
+
+
 }

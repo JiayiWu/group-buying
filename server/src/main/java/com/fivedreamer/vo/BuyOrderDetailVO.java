@@ -150,4 +150,6 @@ public class BuyOrderDetailVO {
     public void setImgPath(String[] imgPath) {
         this.imgPath = imgPath;
     }
+
+
 }

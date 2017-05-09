@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>数据统计</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+
+    <!--<link rel="stylesheet" href="assets/css/main.css" />-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/init.css">
+    <link rel="stylesheet" href="http://oms8m8zuy.bkt.clouddn.com/sweetalert.css">
+    <link rel="stylesheet" href="assets/css/update.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        div.icon-container {
+            font-size: 18px
+        }
+
+        i.material-icons {
+            vertical-align: bottom
+        }
+
+        div.chart-container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<!--<div id="page-wrapper">-->
+
+<!-- Header -->
+<header id="header">
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html" class="icon ">首页</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<div class="container">
+
+    <div class="row ">
+        <div class="col-md-2 col-md-offset-1  col-lg-2 col-lg-offset-1 hidden-sm hidden-xs tab-select">
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                <li role="presentation" class="active"><a href="javascript:void(0)">数据统计</a></li>
+                <li role="presentation"><a href="main.html">广告管理</a></li>
+                <li role="presentation"><a href="info-update.html">账户管理</a></li>
+            </ul>
+        </div>
+        <div class="col-md-8 main-panel">
+            <div class="pull-left icon-container">
+                <i class="material-icons">get_app</i>
+                3664
+            </div>
+
+            <div class="pull-right icon-container">
+                <i class="material-icons">account_circle</i>
+                3761
+            </div>
+            <div class="chart-container">
+                <div id="online" style="width: 100%;height:400px;"></div>
+                <div id="reach-intent" style="width: 100%;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+
+    <ul class="copyright">
+        <li>&copy;2014-2017 <a href="http://www.fivedreamer.com">Steven</a></li>
+    </ul>
+</footer>
+
+<!--</div>-->
+
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.dropotron.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/jquery.scrollgress.min.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/skel.min.js"></script>
+<!--[if lte IE 8]>
+<script src="http://oms8m8zuy.bkt.clouddn.com/respond.min.js"></script><![endif]-->
+
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/bootstrap-table-zh-CN.js"></script>
+<script src="http://oms8m8zuy.bkt.clouddn.com/sweetalert.min.js"></script>
+<script src="assets/js/update.js"></script>
+<script src="//cdn.bootcss.com/echarts/3.5.4/echarts.common.min.js"></script>
+<!-- Scripts -->
+
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('online'));
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: '最近一周访问量'
+        },
+        tooltip: {},
+        legend: {
+            data: ['访问量']
+        },
+        xAxis: {
+            data: ["5月1日", "5月2日", "5月3日", "5月4日", "5月5日", "5月6日", "5月7日"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [2702, 2631, 2497, 2521, 2603, 2476, 2579]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+</script>
+
+<script>
+    // 基于准备好的dom，初始化echarts实例
+    var myChart1 = echarts.init(document.getElementById('reach-intent'));
+    // 指定图表的配置项和数据
+    var option1 = {
+        title: {
+            text: '最近一周达成意向'
+        },
+        tooltip: {},
+        legend: {
+            data: ['意向']
+        },
+        xAxis: {
+            data: ["5月1日", "5月2日", "5月3日", "5月4日", "5月5日", "5月6日", "5月7日"]
+        },
+        yAxis: {},
+        series: [{
+            name: '销量',
+            type: 'bar',
+            data: [30, 21, 19, 20, 19, 22, 18]
+        }]
+    };
+
+    // 使用刚指定的配置项和数据显示图表。
+    myChart1.setOption(option1);
+</script>
+
+</body>
+</html>

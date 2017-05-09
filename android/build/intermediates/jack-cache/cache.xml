@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/glide-3.7.0-e0555c8159f7713bd7f7abe677771d268ba3f092.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-b804f4e92d9d4d0acd162d4e36e5b486811da830.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.koushikdutta.async/androidasync/2.1.9/jars/classes.jar"
+        revision="24.0.2"
+        sha1="60d0e28fe7ab6da6c03b54cd8ede502284d51a81">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-1f7ceeb393315be2ba755a8dbce308164636ce05.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/cn.bingoogolapple/bga-banner/2.1.7/jars/classes.jar"
+        revision="24.0.2"
+        sha1="9d8074399470c272f12c4d5cbab415dc64d277d9">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-4c030514c4082595ff0b2cf2d628502afaaa378e.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-7406707073a987b2789256ec1cf45edab8a8fb67.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.koushikdutta.ion/ion/2.1.9/jars/classes.jar"
+        revision="24.0.2"
+        sha1="7e54ea31584406fcc68225a8656f384c333ff2ee">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-89504d2cdb99d17bda2bf9813010c76298ed4f55.jar" />
+    </item>
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.qiniu/qiniu-android-sdk/7.3.3/ce507a5826e9d737bad0842fd4a78053c2371343/qiniu-android-sdk-7.3.3.jar"
+        revision="24.0.2"
+        sha1="ce507a5826e9d737bad0842fd4a78053c2371343">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/qiniu-android-sdk-7.3.3-7fc26a7174160efa62358affc31dd1b011c50483.jar" />
+    </item>
+    <item
+        jar="/usr/local/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/support-annotations-24.2.1-6b4886715abc9873d3d9bd2398ea7798688a11bb.jar" />
+    </item>
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.2.0/f7873a2ebde246a45c2a8d6f3247108b4c88a879/okhttp-3.2.0.jar"
+        revision="24.0.2"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/okhttp-3.2.0-ee6f427a2df1765063025274c44dac52504a30ad.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-086c5adab9c64df1d7721b69d00c86ab17f5b911.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-dd3a6b39461e3622d0980f59a5b999f95a6ee618.jar" />
+    </item>
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.qiniu/happy-dns/0.2.7/d94b7987386a3aabbb5aa0be21589f72931f0489/happy-dns-0.2.7.jar"
+        revision="24.0.2"
+        sha1="d94b7987386a3aabbb5aa0be21589f72931f0489">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/happy-dns-0.2.7-b4a7a46ce7527d7f0e26cc3875fd818b35a0409e.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-7c7fe8145f273843cff4c10f37c1f232de8b715f.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.jpardogo.materialtabstrip/library/1.1.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="a889c98eedf85a7d9b77340e507ab9b60068e136">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-3e3c85a498536fcbf7bffd20a03f2ea21e6f57b3.jar" />
+    </item>
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        revision="24.0.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/gson-2.3-556622130c2afc704e9481473d06c3f66ee3b7b0.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/cn.bingoogolapple/bga-badgeview/1.1.3/jars/classes.jar"
+        revision="24.0.2"
+        sha1="4fbcdaf5ea465e094a0c992e262ecf0b24d6bafe">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-1829da131229c36ab341106865a5f8d208b93b1b.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        revision="24.0.2"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-b213fc56660496c101d6ccc531c67476d64423af.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/internal_impl-24.2.1-f2b7a1ab3ee857240794f7662c1d9afd76f3f277.jar" />
+    </item>
+    <item
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.6.0/98476622f10715998eacf9240d6b479f12c66143/okio-1.6.0.jar"
+        revision="24.0.2"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/okio-1.6.0-5091379cb978d1321c6be45b07d90e6ea7b34824.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.ogaclejapan.smarttablayout/utils-v4/1.6.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="7dc4e0ea5b06183f6b32f08c5db6bcb6ef79c02a">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-5e21c34057204d124bd77e7b32d07359001b6923.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.ogaclejapan.smarttablayout/library/1.6.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="1d16ffcc50b1dfa726cf978ea9f0a949cdd70e7d">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-b52a22036c69645b6a691400d8c33f354704d51d.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/gridlayout-v7/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="4e6470fe5081bd76bb727ea9d0d9de373ac5940b">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-8b1f955a98fd14df41b7faedfa9673d0de17eea2.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-6043d6b3cbdb7f6eb4470ba126c261d9183b6ca1.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/internal_impl-24.2.1-056aecd9540252b3e8ca5d5c32a7762f015cd281.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.baoyz.swipemenulistview/library/1.3.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="8ec8378e8d7aa3104f60823e6350f2728d3609ba">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-ae763c89d5c661f9069a2b42a4600a19dea82fb8.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-2ff6535a1d1f3cfcd6dc164770afebd9d8c60b4b.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/internal_impl-24.2.1-f34710eb8befef59282309bf8ba11cee5dec7540.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/cn.finalteam/toolsfinal/1.1.5/jars/classes.jar"
+        revision="24.0.2"
+        sha1="966da5b6a8bfdef0bfc660e349f8765dde5cb6f3">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-7609c360451bae9b5ea42c9bdf5162f16c2633d0.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/internal_impl-24.2.1-f812070005ecc2dcc3c57d0a73ba5c858f40336a.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-c3bcc0888f1d44290245540afe1ed17f1f41510c.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-5c194ea89c1562f2276aacd83dac28343d24c1b8.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-3df2f17075e47c180c3b7145f9a09fc35c95eb54.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-68ce67d6bd55a44f0c2a1b71263dea3da044fdc6.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.github.edanel/GBSlideBar/0.5/jars/classes.jar"
+        revision="24.0.2"
+        sha1="c009dcfb2a1f89752d4d00bf97046d4d6ff6a1ef">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-053eb98afa13a9c14a95bc513e4557fbbc53b7b5.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.hyphenate/hyphenate-sdk-lite/3.3.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="413d31ebaedb1f44f429ea1ebe14bc3227b8df64">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-3ae8ef0d2af1aa39a2ad3b6a71e08ec5a00879eb.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-6996004d9913206dab6a5ae019bd1f5ca0ebeb7b.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.github.igortrncic.dotted-progress-bar/library/1.0.0/jars/classes.jar"
+        revision="24.0.2"
+        sha1="e8ea16f46aa9f942b28999b5969353ae2c6283e6">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-ef478ea9a6586565dd026be3b36279add2b0ceb5.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/libs/AMap_Location_V3.4.0_20170427.jar"
+        revision="24.0.2"
+        sha1="fa2675ac2111742d045390a97dd39ea48d957b87">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/AMap_Location_V3.4.0_20170427-21a04d483e4cae64ad1190829f0b0d9a2a9aef0a.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.github.lguipeng/BubbleView/1.0.1/jars/classes.jar"
+        revision="24.0.2"
+        sha1="49cfe618ead4198c63130e6f6c82e1dd213af3b3">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-2a30b6f1accdff1ced81294eacbc3be107e9c2ef.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/internal_impl-24.2.1-5955d39f7c0e77be12f1ad9a786f4dc838d358fc.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/cn.finalteam/galleryfinal/1.4.8.7/jars/classes.jar"
+        revision="24.0.2"
+        sha1="c74f0952cfb481882d8cedf4ca9f3c60289a3301">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-295cdc12bbbe12c1651588b73b2a920547402aec.jar" />
+    </item>
+    <item
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/info.hoang8f/android-segmented/1.0.6/jars/classes.jar"
+        revision="24.0.2"
+        sha1="692a913dff3246e0cc5369c2508f5970ecfeca01">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/preJackPackagedLibraries/release/jars/8000/1f/classes-f4dbf33c3a3447889202b7303e5c85c83b903a2e.jar" />
+    </item>
+
+</items>

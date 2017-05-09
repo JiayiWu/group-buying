@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_086c5adab9c64df1d7721b69d00c86ab17f5b911/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5955d39f7c0e77be12f1ad9a786f4dc838d358fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_68ce67d6bd55a44f0c2a1b71263dea3da044fdc6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f812070005ecc2dcc3c57d0a73ba5c858f40336a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_e0555c8159f7713bd7f7abe677771d268ba3f092/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_7406707073a987b2789256ec1cf45edab8a8fb67/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f34710eb8befef59282309bf8ba11cee5dec7540/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_f2b7a1ab3ee857240794f7662c1d9afd76f3f277/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="dfce3f831d7b1e12ced7bcdc25ede9dc95cfa736">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_290e79bc0614b081ee4bd025acc2180e93c0d573/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.github.clans/fab/1.6.4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1c3b9743fe8bb166a90a7e98b9b9f1f8021d80cd">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.github.clans-fab-1.6.4_b213fc56660496c101d6ccc531c67476d64423af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_f9e259ec442191975681901d5ef392e647484211/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_b804f4e92d9d4d0acd162d4e36e5b486811da830/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/usr/local/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_6b4886715abc9873d3d9bd2398ea7798688a11bb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_5c194ea89c1562f2276aacd83dac28343d24c1b8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_6996004d9913206dab6a5ae019bd1f5ca0ebeb7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_056aecd9540252b3e8ca5d5c32a7762f015cd281/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-2.1.0_2ff6535a1d1f3cfcd6dc164770afebd9d8c60b4b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_7c7fe8145f273843cff4c10f37c1f232de8b715f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3c44a4ca9e95d47007e297849ccf87ba70085b1c">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_7c9c1d318f2616de3a51ce41d2589ded5c2de0ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_dd3a6b39461e3622d0980f59a5b999f95a6ee618/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_3df2f17075e47c180c3b7145f9a09fc35c95eb54/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_c3bcc0888f1d44290245540afe1ed17f1f41510c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/song/program/MergeOrder/Android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/song/program/MergeOrder/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_6043d6b3cbdb7f6eb4470ba126c261d9183b6ca1/classes.dex" />
+    </item>
+
+</items>

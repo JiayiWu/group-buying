@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:toolbar="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:context=".presentation.activity.PublishActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/publish_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            toolbar:titleTextColor="@color/white"
+            toolbar:navigationIcon="@drawable/ic_close_24dp"/>
+
+    <FrameLayout
+            android:id="@+id/publish_type_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@id/publish_toolbar">
+
+        <Spinner
+                android:id="@+id/publish_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+        </Spinner>
+
+        <EditText
+                android:id="@+id/publish_direction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:hint="@string/publish_direction"/>
+
+    </FrameLayout>
+
+    <EditText
+            android:id="@+id/publish_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/publish_type_container"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:inputType="text"
+            android:hint="@string/publish_title"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publish_title">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <EditText
+                    android:id="@+id/publish_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@null"
+                    android:inputType="textMultiLine"
+                    android:minLines="5"
+                    android:maxLines="5"
+                    android:gravity="top"
+                    android:textSize="16sp"
+                    android:hint="@string/publish_description_hint"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="8dp"
+                    android:paddingStart="8dp">
+
+                <com.mergeorder.presentation.view.AlterImageView
+                        android:id="@+id/publish_image_0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"/>
+
+                <com.mergeorder.presentation.view.AlterImageView
+                        android:id="@+id/publish_image_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"/>
+
+                <com.mergeorder.presentation.view.AlterImageView
+                        android:id="@+id/publish_image_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:scaleType="centerCrop"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/publish_bottom"
+            android:background="@mipmap/shadow"
+            android:contentDescription="@string/shadow"/>
+
+    <RelativeLayout
+            android:id="@+id/publish_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@color/white">
+
+        <ImageView
+                android:id="@+id/publish_add_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_place_24dp"
+                android:contentDescription="@string/label_add_location"/>
+
+        <TextView
+                android:id="@+id/publish_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/publish_add_location"
+                android:layout_toEndOf="@id/publish_add_location"
+                android:layout_toLeftOf="@+id/publish_add_picture"
+                android:layout_toStartOf="@+id/publish_add_picture"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@+id/publish_add_picture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/ic_image_24dp"
+                android:contentDescription="@string/label_add_image"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

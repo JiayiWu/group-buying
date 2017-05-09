@@ -1,0 +1,84 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:fab="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/greyText"
+             tools:context=".presentation.fragment.IndexFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/index_swipe_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <com.mergeorder.presentation.view.TopicListView
+                    android:id="@+id/index_topic_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:divider="@color/greyText"
+                    android:dividerHeight="8dp">
+
+            </com.mergeorder.presentation.view.TopicListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/index_publish_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|center_horizontal"
+            android:paddingBottom="25dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            fab:menu_fab_size="mini"
+            fab:menu_animationDelayPerItem="0"
+            fab:menu_backgroundColor="#ccffffff"
+            fab:menu_colorNormal="@color/colorPrimary"
+            fab:menu_colorPressed="@color/colorPrimaryDark"
+            fab:menu_colorRipple="@color/colorPrimary"
+            fab:menu_labels_style="@style/MenuLabelsStyle"
+            fab:menu_shadowColor="#444">
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/index_btn_publish_course"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_school_24dp"
+                fab:fab_label="@string/label_course"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/index_btn_publish_postal"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mail_outline_24dp"
+                fab:fab_label="@string/label_postal"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/index_btn_publish_car"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_directions_car_24dp"
+                fab:fab_label="@string/label_car"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/index_btn_publish_group"
+                style="@style/MenuButtonsSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_restaurant_24dp"
+                fab:fab_label="@string/label_group"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</FrameLayout>

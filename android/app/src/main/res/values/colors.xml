@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fbb8ca</color>
+    <color name="colorPrimaryDark">#f1b2c2</color>
+    <color name="colorAccent">#FBB9CA</color>
+    <color name="windowBackground">#9E9E9E</color>
+    <color name="colorToolBar">#fbb9ca</color>
+    <color name="colorSearchBar">#f5c9d5</color>
+    <color name="colorProgressContainer">#ad000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#fafafa</color>
+    <color name="grey500">#9E9E9E</color>
+    <color name="greyText">#eeeeee</color>
+    <color name="bottom_tabs_bg">#FAFAFA</color>
+    <color name="bottom_tabs_fg">#9E9E9E</color>
+    <color name="transparent">#00000000</color>
+    <color name="menuBackground">#FAFAFA</color>
+    <color name="tab_text_normal">#212121</color>
+    <color name="colorLocation">#80b6ca</color>
+    <color name="colorBubble">#7EC0EE</color>
+    <color name="blue">#00bcd4</color>
+    <color name="green">#239125</color>
+    <color name="red">#ff0000</color>
+</resources>

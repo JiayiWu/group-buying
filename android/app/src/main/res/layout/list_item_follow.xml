@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/follow_item_portrait"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+    <TextView
+            android:id="@+id/follow_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_toRightOf="@id/follow_item_portrait"
+            android:layout_toEndOf="@id/follow_item_portrait"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"/>
+
+    <Button
+            android:id="@+id/follow_item_follow"
+            android:layout_width="72dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/colorPrimary"
+            android:layout_centerVertical="true"
+            android:text="@string/label_followed"/>
+
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:paddingLeft="48dp"
+              android:paddingRight="48dp"
+              android:paddingTop="64dp"
+              tools:context=".presentation.fragment.MeFragment"
+              android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/register_et_phoneNum"
+                android:inputType="phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/selector_ic_phone"
+                android:drawableLeft="@drawable/selector_ic_phone"
+                android:drawablePadding="4dp"
+                android:hint="@string/login_phoneNum"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="false">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/register_et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/selector_ic_lock"
+                android:drawableStart="@drawable/selector_ic_lock"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:hint="@string/login_password"
+                android:inputType="textPassword"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="false">
+
+        <android.support.design.widget.TextInputEditText
+                android:id="@+id/register_et_password_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/selector_ic_lock"
+                android:drawableStart="@drawable/selector_ic_lock"
+                android:drawablePadding="4dp"
+                android:gravity="center_vertical"
+                android:hint="@string/login_password_repeat"
+                android:inputType="textPassword"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_btn_register"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:text="@string/register"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/register_btn_login"
+            android:layout_marginTop="16dp"
+            android:background="@color/transparent"
+            android:textColor="@color/grey500"
+            android:text="@string/login"/>
+
+</LinearLayout>

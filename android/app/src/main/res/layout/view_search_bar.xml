@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+        android:id="@+id/index_search_bar"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorToolBar"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@color/colorSearchBar">
+
+        <android.support.v7.widget.SearchView
+                android:id="@+id/index_search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:queryHint="搜索">
+
+        </android.support.v7.widget.SearchView>
+
+        <TextView
+                android:id="@+id/index_search_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/index_search_view"
+                android:layout_toEndOf="@id/index_search_view"
+                android:text="@string/search"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>
